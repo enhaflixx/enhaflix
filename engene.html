@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHA-FLIX - Engene</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="main-page" class="page active">
+        <header class="main-header" id="main-header">
+    <a href="index.html" class="header-logo">ENHA-FLIX</a>
+    <div class="search-container">
+    <input type="text" class="search-bar" id="searchInput" placeholder="Search for content..." onkeyup="handleSearch()">
+    <div class="search-results" id="searchResults"></div>
+</div>
+</header>
+
+        <div class="hero-banner" id="hero-banner">
+            <!-- Banner will be loaded automatically by JavaScript -->
+        </div>
+
+        <section class="categories-section">
+            <!-- Continue Watching Section -->
+            <div id="continue-watching-section" class="category" style="display: none;">
+                <div class="category-header">
+                    <h2 class="category-title">Continue Watching</h2>
+                </div>
+                <div id="continue-watching-row" class="content-row">
+                    <!-- Continue watching items will be loaded here -->
+                </div>
+                <div class="history-link-container">
+                    <a href="history.html" class="history-link">See All History →</a>
+                </div>
+            </div>
+
+            <!-- My Favorites Section -->
+            <div id="favorites-section" class="category" style="display: none;">
+                <div class="category-header">
+                    <h2 class="category-title">My Favorites</h2>
+                </div>
+                <div id="favorites-row" class="content-row">
+                    <!-- Favorite items will be loaded here -->
+                </div>
+                <div class="favorites-link-container">
+                    <a href="favorites.html" class="favorites-link">See All Favorites →</a>
+                </div>
+            </div>
+
+            <!-- Regular Categories -->
+            <div id="categories-container">
+                <!-- Categories will be loaded automatically by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal">
+        <div class="modal-overlay" onclick="closeVideoModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Video Player</h3>
+                <div class="modal-controls">
+                    <button class="modal-btn fullscreen-btn" onclick="toggleFullscreen()">
+                        ⛶ Fullscreen
+                    </button>
+                    <button class="modal-btn close-btn" onclick="closeVideoModal()">
+                        ✕ Close
+                    </button>
+                </div>
+            </div>
+            <div class="video-container">
+                <div id="video-player"></div>
+                <div class="progress-indicator" id="progress-indicator">
+                    <div class="progress-text">Watching: <span id="progress-percent">0%</span></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="scripts/config.js"></script>
+    <script>
+        // ===== WATCH HISTORY SYSTEM =====
+        const WatchHistory = {
+            saveProgress: function(videoId, title, thumbnail, currentTime, duration, url) {
+                const history = this.getHistory();
+                const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+                const isFinished = progress >= 90;
+                
+                const historyItem = {
+                    id: videoId,
+                    title: title,
+                    thumbnail: thumbnail,
+                    url: url,
+                    progress: Math.min(progress, 100),
+                    currentTime: currentTime,
+                    duration: duration,
+                    lastWatched: new Date().toISOString(),
+                    finished: isFinished
+                };
+                
+                const existingIndex = history.findIndex(item => item.id === videoId);
+                if (existingIndex !== -1) {
+                    history.splice(existingIndex, 1);
+                }
+                
+                history.unshift(historyItem);
+                
+                if (history.length > 100) {
+                    history.splice(100);
+                }
+                
+                localStorage.setItem('enhaflix_watch_history', JSON.stringify(history));
+                this.updateContinueWatching();
+            },
+            
+            getHistory: function() {
+                try {
+                    return JSON.parse(localStorage.getItem('enhaflix_watch_history')) || [];
+                } catch {
+                    return [];
+                }
+            },
+            
+            removeFromHistory: function(videoId) {
+                const history = this.getHistory();
+                const filtered = history.filter(item => item.id !== videoId);
+                localStorage.setItem('enhaflix_watch_history', JSON.stringify(filtered));
+                this.updateContinueWatching();
+            },
+            
+            clearAllHistory: function() {
+                localStorage.removeItem('enhaflix_watch_history');
+                this.updateContinueWatching();
+            },
+            
+            updateContinueWatching: function() {
+                const container = document.getElementById('continue-watching-row');
+                const section = document.getElementById('continue-watching-section');
+                
+                if (!container) return;
+                
+                const history = this.getHistory();
+                const continueWatching = history.slice(0, 15);
+                
+                if (continueWatching.length === 0) {
+                    section.style.display = 'none';
+                    return;
+                }
+                
+                section.style.display = 'block';
+                container.innerHTML = continueWatching.map(item => this.createHistoryItem(item)).join('');
+            },
+            
+            createHistoryItem: function(item) {
+                const progressPercent = Math.round(item.progress);
+                const timeAgo = this.getTimeAgo(item.lastWatched);
+                
+                return `
+                    <div class="history-item" data-id="${item.id}">
+                        <div class="history-thumbnail" onclick="playFromHistory('${item.id}')">
+                            <img src="${item.thumbnail || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE3MCIgdmlld0JveD0iMCAwIDMwMCAxNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMTcwIiBmaWxsPSIjMzMzIi8+CjxwYXRoIGQ9Ik0xMjAgODVMMTQwIDcwTDE2MCA4NUwxNDAgMTAwTDEyMCA4NVoiIGZpbGw9IiNlNTA5MTQiLz4KPC9zdmc+'}">
+                            <div class="progress-overlay" style="width: ${100 - progressPercent}%"></div>
+                            <div class="progress-text-overlay">${progressPercent}%</div>
+                            <div class="history-hover-actions">
+                                <button class="history-action-btn continue-btn" onclick="playFromHistory('${item.id}')">▶</button>
+                                <button class="history-action-btn remove-btn" onclick="WatchHistory.removeFromHistory('${item.id}')">×</button>
+                            </div>
+                        </div>
+                        <div class="history-info">
+                            <div class="history-title">${item.title}</div>
+                            <div class="history-meta">${progressPercent}% • ${timeAgo}</div>
+                        </div>
+                    </div>
+                `;
+            },
+            
+            getTimeAgo: function(dateString) {
+                const date = new Date(dateString);
+                const now = new Date();
+                const diffMs = now - date;
+                const diffMins = Math.floor(diffMs / 60000);
+                const diffHours = Math.floor(diffMs / 3600000);
+                const diffDays = Math.floor(diffMs / 86400000);
+                
+                if (diffMins < 1) return 'Just now';
+                if (diffMins < 60) return `${diffMins}m ago`;
+                if (diffHours < 24) return `${diffHours}h ago`;
+                if (diffDays < 7) return `${diffDays}d ago`;
+                return date.toLocaleDateString();
+            }
+        };
+
+        // ===== FAVORITES SYSTEM =====
+        const FavoritesManager = {
+            toggleFavorite: function(itemId, title, thumbnail, url) {
+                const favorites = this.getFavorites();
+                const existingIndex = favorites.findIndex(item => item.id === itemId);
+                
+                if (existingIndex !== -1) {
+                    favorites.splice(existingIndex, 1);
+                    this.showToast(`Removed from Favorites`);
+                } else {
+                    favorites.unshift({
+                        id: itemId,
+                        title: title,
+                        thumbnail: thumbnail,
+                        url: url,
+                        addedAt: new Date().toISOString()
+                    });
+                    this.showToast(`Added to Favorites ❤️`);
+                }
+                
+                localStorage.setItem('enhaflix_favorites', JSON.stringify(favorites));
+                this.updateFavoritesSection();
+                return existingIndex === -1;
+            },
+            
+            isFavorited: function(itemId) {
+                const favorites = this.getFavorites();
+                return favorites.some(item => item.id === itemId);
+            },
+            
+            getFavorites: function() {
+                try {
+                    return JSON.parse(localStorage.getItem('enhaflix_favorites')) || [];
+                } catch {
+                    return [];
+                }
+            },
+            
+            removeFromFavorites: function(itemId) {
+                const favorites = this.getFavorites();
+                const filtered = favorites.filter(item => item.id !== itemId);
+                localStorage.setItem('enhaflix_favorites', JSON.stringify(filtered));
+                this.updateFavoritesSection();
+                this.showToast(`Removed from Favorites`);
+            },
+            
+            clearAllFavorites: function() {
+                localStorage.removeItem('enhaflix_favorites');
+                this.updateFavoritesSection();
+                this.showToast(`Cleared all favorites`);
+            },
+            
+            updateFavoritesSection: function() {
+                const container = document.getElementById('favorites-row');
+                const section = document.getElementById('favorites-section');
+                
+                if (!container) return;
+                
+                const favorites = this.getFavorites();
+                
+                if (favorites.length === 0) {
+                    section.style.display = 'none';
+                    return;
+                }
+                
+                section.style.display = 'block';
+                container.innerHTML = favorites.map(item => this.createFavoriteItem(item)).join('');
+            },
+            
+            createFavoriteItem: function(item) {
+                const timeAgo = this.getTimeAgo(item.addedAt);
+                
+                return `
+                    <div class="favorite-item" data-id="${item.id}">
+                        <div class="favorite-thumbnail" onclick="openLink('${item.url}', '${item.title.replace(/'/g, "\\'")}', '${item.thumbnail}')">
+                            <img src="${item.thumbnail || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE3MCIgdmlld0JveD0iMCAwIDMwMCAxNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzMDAiIGhlaWdodD0iMTcwIiBmaWxsPSIjMzMzIi8+CjxwYXRoIGQ9Ik0xMjAgODVMMTQwIDcwTDE2MCA4NUwxNDAgMTAwTDEyMCA4NVoiIGZpbGw9IiNlNTA5MTQiLz4KPC9zdmc+'}">
+                            <div class="favorite-heart heart-active" onclick="event.stopPropagation(); FavoritesManager.removeFromFavorites('${item.id}')">
+                                ❤️
+                            </div>
+                            <div class="favorite-hover-actions">
+                                <button class="favorite-action-btn play-btn" onclick="event.stopPropagation(); openLink('${item.url}', '${item.title.replace(/'/g, "\\'")}', '${item.thumbnail}')">▶</button>
+                                <button class="favorite-action-btn remove-btn" onclick="event.stopPropagation(); FavoritesManager.removeFromFavorites('${item.id}')">×</button>
+                            </div>
+                        </div>
+                        <div class="favorite-info">
+                            <div class="favorite-title">${item.title}</div>
+                            <div class="favorite-meta">Added ${timeAgo}</div>
+                        </div>
+                    </div>
+                `;
+            },
+            
+            showToast: function(message) {
+                const toast = document.getElementById('toast');
+                const toastMessage = document.getElementById('toast-message');
+                
+                toastMessage.textContent = message;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            },
+            
+            getTimeAgo: function(dateString) {
+                const date = new Date(dateString);
+                const now = new Date();
+                const diffMs = now - date;
+                const diffMins = Math.floor(diffMs / 60000);
+                const diffHours = Math.floor(diffMs / 3600000);
+                const diffDays = Math.floor(diffMs / 86400000);
+                
+                if (diffMins < 1) return 'just now';
+                if (diffMins < 60) return `${diffMins}m ago`;
+                if (diffHours < 24) return `${diffHours}h ago`;
+                if (diffDays < 7) return `${diffDays}d ago`;
+                return date.toLocaleDateString();
+            }
+        };
+
+        // ===== SEARCH SYSTEM =====
+class SearchManager {
+    constructor() {
+        this.allContent = this.getAllContent();
+        this.searchInput = document.getElementById('searchInput');
+        this.searchResults = document.getElementById('searchResults');
+        this.setupSearch();
+    }
+
+    setupSearch() {
+        // Close search results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.search-container')) {
+                this.hideResults();
+            }
+        });
+
+        // Handle escape key
+        this.searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                this.hideResults();
+                this.searchInput.blur();
+            }
+        });
+    }
+
+    getAllContent() {
+        const allItems = [];
+        
+        // Loop through all categories and subcategories
+        Object.values(categoriesConfig).forEach(category => {
+            Object.values(category).forEach(subcategory => {
+                subcategory.forEach(item => {
+                    allItems.push({
+                        ...item,
+                        // Add category info for better search
+                        searchableText: `${item.name} ${item.description || ''}`.toLowerCase()
+                    });
+                });
+            });
+        });
+
+        return allItems;
+    }
+
+    search(query) {
+        if (!query.trim()) {
+            this.hideResults();
+            return [];
+        }
+
+        const searchTerm = query.toLowerCase().trim();
+        const results = this.allContent.filter(item => {
+            return item.searchableText.includes(searchTerm) ||
+                   item.name.toLowerCase().includes(searchTerm) ||
+                   (item.description && item.description.toLowerCase().includes(searchTerm));
+        });
+
+        // Sort by relevance (exact matches first)
+        return results.sort((a, b) => {
+            const aNameMatch = a.name.toLowerCase().includes(searchTerm);
+            const bNameMatch = b.name.toLowerCase().includes(searchTerm);
+            
+            if (aNameMatch && !bNameMatch) return -1;
+            if (!aNameMatch && bNameMatch) return 1;
+            
+            return 0;
+        });
+    }
+
+    displayResults(results) {
+        if (results.length === 0) {
+            this.searchResults.innerHTML = `
+                <div class="no-results">
+                    <div class="no-results-icon">🔍</div>
+                    <div class="no-results-text">No results found</div>
+                    <div class="no-results-hint">Try different keywords</div>
+                </div>
+            `;
+            this.searchResults.style.display = 'block';
+            return;
+        }
+
+        this.searchResults.innerHTML = results.slice(0, 8).map(item => `
+            <div class="search-result-item" onclick="openLink('${item.url}', '${item.name.replace(/'/g, "\\'")}', '${item.thumbnail}')">
+                <div class="search-result-thumbnail">
+                    <img src="${item.thumbnail}" alt="${item.name}" 
+                         onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDUiIHZpZXdCb3g9IjAgMCA4MCA0NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iNDUiIGZpbGw9IiMzMzMiLz48cGF0aCBkPSJNMzIgMjIuNUwzNiAxOUw0MCAyMi41TDM2IDI2TDMyIDIyLjVaIiBmaWxsPSIjZTUwOTE0Ii8+PC9zdmc+'">
+                </div>
+                <div class="search-result-info">
+                    <div class="search-result-title">${item.name}</div>
+                    ${item.description ? `<div class="search-result-description">${item.description}</div>` : ''}
+                </div>
+            </div>
+        `).join('');
+
+        this.searchResults.style.display = 'block';
+    }
+
+    hideResults() {
+        this.searchResults.style.display = 'none';
+    }
+
+    clearSearch() {
+        this.searchInput.value = '';
+        this.hideResults();
+    }
+}
+
+// Global instance
+let searchManager;
+
+// Initialize search when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    searchManager = new SearchManager();
+});
+
+// Handle search input
+function handleSearch() {
+    const query = document.getElementById('searchInput').value;
+    const results = searchManager.search(query);
+    searchManager.displayResults(results);
+}
+
+        // ===== ENHANCED VIDEO PLAYER =====
+        let currentVideoData = null;
+        let progressInterval = null;
+
+        function openVideoModal(url, title, thumbnail = '') {
+            const modal = document.getElementById('video-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const videoPlayer = document.getElementById('video-player');
+            
+            modalTitle.textContent = title;
+            
+            const embedUrl = generateEmbedUrl(url);
+            const videoId = generateVideoId(url, title);
+            
+            currentVideoData = {
+                id: videoId,
+                title: title,
+                thumbnail: thumbnail,
+                url: url,
+                startTime: Date.now()
+            };
+            
+            if (embedUrl) {
+                videoPlayer.innerHTML = `
+                    <iframe 
+                        src="${embedUrl}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        style="width: 100%; height: 100%;"
+                        onload="startProgressTracking('${videoId}', '${title.replace(/'/g, "\\'")}', '${thumbnail}')"
+                    ></iframe>
+                `;
+            } else {
+                videoPlayer.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 1.2rem;">
+                        <p>This content cannot be embedded. <a href="${url}" target="_blank" style="color: #e50914;">Open in new tab</a></p>
+                    </div>
+                `;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function startProgressTracking(videoId, title, thumbnail) {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+            
+            let secondsWatched = 0;
+            const estimatedDuration = 180;
+            
+            progressInterval = setInterval(() => {
+                secondsWatched++;
+                const progress = (secondsWatched / estimatedDuration) * 100;
+                
+                const progressPercent = document.getElementById('progress-percent');
+                const progressFill = document.getElementById('progress-fill');
+                
+                if (progressPercent && progressFill) {
+                    progressPercent.textContent = Math.min(Math.round(progress), 100) + '%';
+                    progressFill.style.width = Math.min(progress, 100) + '%';
+                }
+                
+                if (secondsWatched % 10 === 0) {
+                    WatchHistory.saveProgress(
+                        videoId, 
+                        title, 
+                        thumbnail, 
+                        secondsWatched, 
+                        estimatedDuration,
+                        currentVideoData.url
+                    );
+                }
+            }, 1000);
+        }
+
+        function stopProgressTracking() {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+                progressInterval = null;
+            }
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const videoPlayer = document.getElementById('video-player');
+            
+            stopProgressTracking();
+            
+            if (currentVideoData) {
+                const secondsWatched = Math.floor((Date.now() - currentVideoData.startTime) / 1000);
+                const estimatedDuration = 180;
+                
+                WatchHistory.saveProgress(
+                    currentVideoData.id,
+                    currentVideoData.title,
+                    currentVideoData.thumbnail,
+                    secondsWatched,
+                    estimatedDuration,
+                    currentVideoData.url
+                );
+                
+                currentVideoData = null;
+            }
+            
+            videoPlayer.innerHTML = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function generateVideoId(url, title) {
+            return btoa(url + title).replace(/[^a-zA-Z0-9]/g, '');
+        }
+
+        function generateItemId(url, title) {
+    // Safe encoding that works with all characters
+    const encoder = new TextEncoder();
+    const data = encoder.encode(url + title);
+    let binary = '';
+    for (let i = 0; i < data.length; i++) {
+        binary += String.fromCharCode(data[i]);
+    }
+    return btoa(binary).replace(/[^a-zA-Z0-9]/g, '');
+}
+
+        // ===== HISTORY PLAYBACK =====
+        function playFromHistory(videoId) {
+            const history = WatchHistory.getHistory();
+            const item = history.find(h => h.id === videoId);
+            
+            if (item) {
+                openVideoModal(item.url, item.title, item.thumbnail);
+            }
+        }
+
+        // ===== UPDATED CONTENT ITEM CLICK HANDLER =====
+        // ===== IMPROVED CONTENT ITEM CLICK HANDLER =====
+function openLink(url, title, thumbnail = '') {
+    console.log('🔗 Opening link:', { url, title, thumbnail });
+    
+    if (!url) {
+        alert('No URL provided for this content');
+        return;
+    }
+    
+    if (url.includes('EXAMPLE')) {
+        alert('Replace with actual URL in config.js');
+        return;
+    }
+    
+    // Clean the URL and ensure it's properly formatted
+    let cleanUrl = url.trim();
+    
+    // If it's a YouTube URL without https, add it
+    if (cleanUrl.includes('youtube.com') && !cleanUrl.startsWith('http')) {
+        cleanUrl = 'https://' + cleanUrl;
+    }
+    
+    // If it's a YouTube watch URL, convert to embed format
+    if (cleanUrl.includes('youtube.com/watch?v=')) {
+        const videoId = cleanUrl.split('v=')[1]?.split('&')[0];
+        if (videoId) {
+            openVideoModal(`https://www.youtube.com/embed/${videoId}`, title, thumbnail);
+            return;
+        }
+    }
+    
+    // If it's a youtu.be short URL
+    if (cleanUrl.includes('youtu.be/')) {
+        const videoId = cleanUrl.split('youtu.be/')[1]?.split('?')[0];
+        if (videoId) {
+            openVideoModal(`https://www.youtube.com/embed/${videoId}`, title, thumbnail);
+            return;
+        }
+    }
+    
+    // For all other URLs, try to open in modal
+    openVideoModal(cleanUrl, title, thumbnail);
+}
+
+        // ===== UPDATED CONTENT ITEMS WITH HEARTS =====
+  function createContentItem(item, isHidden = false) {
+    const background = item.thumbnail ? 
+        `background-image: url('${item.thumbnail}')` : 
+        'background: linear-gradient(135deg, #e50914, #b20710)';
+    
+    const itemId = generateItemId(item.url, item.name);
+    const isFavorited = FavoritesManager.isFavorited(itemId);
+    const heartIcon = isFavorited ? '❤️' : '♡';
+
+    return `
+        <div class="content-item ${isHidden ? 'hidden-content' : ''}" 
+             data-url="${item.url}"
+             data-title="${item.name.replace(/'/g, "\\'")}"
+             data-thumbnail="${item.thumbnail}">
+            <div class="content-thumbnail">
+                <div class="item-placeholder" style="${background}">
+                    <div class="item-overlay">
+                        <div class="item-title">${item.name}</div>
+                        ${item.description ? `<div class="item-description">${item.description}</div>` : ''}
+                    </div>
+                </div>
+                <div class="heart-button ${isFavorited ? 'heart-active' : ''}">
+                    ${heartIcon}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+        function toggleItemFavorite(itemId, title, thumbnail, url) {
+            const isNowFavorited = FavoritesManager.toggleFavorite(itemId, title, thumbnail, url);
+            
+            const heartButton = event.target;
+            if (isNowFavorited) {
+                heartButton.innerHTML = '❤️';
+                heartButton.classList.add('heart-active');
+                heartButton.classList.add('heart-pulse');
+                setTimeout(() => heartButton.classList.remove('heart-pulse'), 600);
+            } else {
+                heartButton.innerHTML = '♡';
+                heartButton.classList.remove('heart-active');
+            }
+        }
+
+        // ===== YOUR EXISTING CATEGORY SYSTEM =====
+        function loadAllCategories() {
+            const container = document.getElementById('categories-container');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            if (!categoriesConfig || Object.keys(categoriesConfig).length === 0) {
+                container.innerHTML = '<p style="text-align: center; padding: 2rem;">No categories found in config.js</p>';
+                return;
+            }
+
+            Object.entries(categoriesConfig).forEach(([categoryTitle, subcategories], categoryIndex) => {
+                const categoryElement = createCategoryElement(categoryTitle, subcategories, categoryIndex);
+                container.appendChild(categoryElement);
+            });
+        }
+
+        function createCategoryElement(categoryTitle, subcategories, categoryIndex) {
+            const element = document.createElement('div');
+            element.className = 'category';
+            element.id = `category-${categoryIndex}`;
+
+            let html = `
+                <div class="category-header">
+                    <h2 class="category-title">${categoryTitle}</h2>
+                </div>
+            `;
+
+            Object.entries(subcategories).forEach(([subcategoryTitle, items], subIndex) => {
+                html += createSubcategoryElement(categoryIndex, subcategoryTitle, items, subIndex);
+            });
+
+            element.innerHTML = html;
+            return element;
+        }
+
+        function createSubcategoryElement(categoryIndex, subcategoryTitle, items, subIndex) {
+            const subcategoryId = `subcategory-${categoryIndex}-${subIndex}`;
+            
+            const visibleItems = items.slice(0, 5);
+            const hiddenItems = items.slice(5);
+            const hasHiddenItems = hiddenItems.length > 0;
+
+            return `
+                <div class="subcategory" id="${subcategoryId}">
+                    <h3 class="subcategory-title">${subcategoryTitle}</h3>
+                    <div class="content-row">
+                        ${visibleItems.map(item => createContentItem(item)).join('')}
+                        ${hasHiddenItems ? hiddenItems.map(item => createContentItem(item, true)).join('') : ''}
+                    </div>
+                    ${hasHiddenItems ? `
+                        <div class="show-more-container">
+                            <button class="show-more-btn" onclick="toggleContentItems('${subcategoryId}')">
+                                <span class="show-more-text">Show More</span>
+                                <span class="show-more-count">+${hiddenItems.length}</span>
+                                <span class="show-more-icon">▼</span>
+                            </button>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        function toggleContentItems(subcategoryId) {
+            const subcategory = document.getElementById(subcategoryId);
+            const hiddenItems = subcategory.querySelectorAll('.hidden-content');
+            const showMoreBtn = subcategory.querySelector('.show-more-btn');
+            const showMoreText = showMoreBtn.querySelector('.show-more-text');
+            const showMoreIcon = showMoreBtn.querySelector('.show-more-icon');
+
+            if (hiddenItems.length > 0) {
+                hiddenItems.forEach(item => {
+                    item.classList.remove('hidden-content');
+                });
+                showMoreText.textContent = 'Show Less';
+                showMoreIcon.textContent = '▲';
+                showMoreBtn.classList.add('expanded');
+            } else {
+                const allItems = subcategory.querySelectorAll('.content-item');
+                allItems.forEach((item, index) => {
+                    if (index >= 5) {
+                        item.classList.add('hidden-content');
+                    }
+                });
+                showMoreText.textContent = 'Show More';
+                showMoreIcon.textContent = '▼';
+                showMoreBtn.classList.remove('expanded');
+            }
+        }
+
+        function generateEmbedUrl(url) {
+            try {
+                const urlObj = new URL(url);
+                
+                if (urlObj.hostname.includes('youtube.com') || urlObj.hostname.includes('youtu.be')) {
+                    let videoId;
+                    
+                    if (urlObj.hostname.includes('youtu.be')) {
+                        videoId = urlObj.pathname.slice(1);
+                    } else {
+                        videoId = urlObj.searchParams.get('v');
+                    }
+                    
+                    if (videoId) {
+                        return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+                    }
+                }
+                
+                else if (urlObj.hostname.includes('spotify.com')) {
+                    const pathParts = urlObj.pathname.split('/');
+                    const type = pathParts[1];
+                    const id = pathParts[2];
+                    
+                    if (type && id) {
+                        return `https://open.spotify.com/embed/${type}/${id}`;
+                    }
+                }
+                
+                else if (urlObj.hostname.includes('drive.google.com')) {
+                    const fileIdMatch = url.match(/\/d\/([^\/]+)/);
+                    if (fileIdMatch) {
+                        const fileId = fileIdMatch[1];
+                        return `https://drive.google.com/file/d/${fileId}/preview`;
+                    }
+                }
+                
+                else if (urlObj.hostname.includes('kisskh')) {
+                    return url;
+                }
+                
+                return url;
+                
+            } catch (error) {
+                console.error('Error generating embed URL:', error);
+                return null;
+            }
+        }
+
+        function toggleFullscreen() {
+            const modal = document.getElementById('video-modal');
+            const fullscreenBtn = document.querySelector('.fullscreen-btn');
+            
+            if (modal.classList.contains('fullscreen')) {
+                modal.classList.remove('fullscreen');
+                fullscreenBtn.textContent = '⛶ Fullscreen';
+            } else {
+                modal.classList.add('fullscreen');
+                fullscreenBtn.textContent = '⛶ Exit Fullscreen';
+            }
+        }
+
+        // ===== CLICK HANDLERS =====
+document.addEventListener('click', function(e) {
+    // Handle content item clicks
+    const contentItem = e.target.closest('.content-item');
+    if (contentItem && !e.target.closest('.heart-button')) {
+        const url = contentItem.getAttribute('data-url');
+        const title = contentItem.getAttribute('data-title');
+        const thumbnail = contentItem.getAttribute('data-thumbnail');
+        
+        if (url) {
+            openLink(url, title, thumbnail);
+        }
+    }
+    
+    // Handle heart button clicks
+    const heartButton = e.target.closest('.heart-button');
+    if (heartButton) {
+        const contentItem = heartButton.closest('.content-item');
+        if (contentItem) {
+            const url = contentItem.getAttribute('data-url');
+            const title = contentItem.getAttribute('data-title');
+            const thumbnail = contentItem.getAttribute('data-thumbnail');
+            const itemId = generateItemId(url, title);
+            
+            toggleItemFavorite(itemId, title, thumbnail, url);
+        }
+    }
+});
+
+        // ===== INITIALIZATION =====
+        function setupHeaderScroll() {
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        }
+
+        function loadHeroBanner() {
+            const heroBanner = document.getElementById('hero-banner');
+            if (!heroBanner || !CONFIG.banners || CONFIG.banners.length === 0) return;
+
+            const banner = CONFIG.banners[0];
+            
+            let backgroundStyle = '';
+            if (banner.type === 'image' && banner.background) {
+                backgroundStyle = `background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${banner.background}') center/cover;`;
+            } else {
+                backgroundStyle = `background: ${banner.background};`;
+            }
+
+            const textColor = banner.textColor || '#ffffff';
+
+            heroBanner.innerHTML = `
+                <div class="banner-slide active" style="${backgroundStyle}">
+                    <div class="banner-content" style="color: ${textColor}">
+                        <h1 class="banner-title">${banner.title}</h1>
+                        <p class="banner-description">${banner.description}</p>
+                        <button class="banner-button" onclick="playVideo('${banner.youtubeId}')">${banner.buttonText}</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadFonts() {
+            const style = document.createElement('style');
+            style.textContent = `
+                @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+                
+                .banner-title, .category-title, .header-logo {
+                    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+                    font-weight: 900;
+                }
+                
+                .banner-description, .profile-name, .subcategory-title {
+                    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+                    font-weight: 500;
+                }
+                
+                body {
+                    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        function playVideo(videoId) {
+            if (videoId && videoId !== 'EXAMPLE_ID_1') {
+                window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+            } else {
+                alert('This is an example video. Replace with actual YouTube ID in config.js');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Starting ENHA-FLIX...');
+            loadAllCategories();
+            setupHeaderScroll();
+            loadHeroBanner();
+            loadFonts();
+            
+            // Initialize both systems
+            WatchHistory.updateContinueWatching();
+            FavoritesManager.updateFavoritesSection();
+            
+            console.log('✅ ENHA-FLIX loaded successfully!');
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('video-modal');
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+    </script>
+<script>
+// Temporary debug - shows what happens when clicking content
+document.addEventListener('click', function(e) {
+    const contentItem = e.target.closest('.content-item');
+    if (contentItem) {
+        console.log('🎬 Content item clicked:', contentItem);
+        console.log('📍 Clicked element:', e.target);
+    }
+}, true);
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHA-FLIX</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-page" class="page active">
+        <div class="logo">ENHA-FLIX</div>
+    </div>
+
+    <!-- Profile Selection -->
+    <div id="profile-page" class="page">
+        <h1 class="profile-title">Who's Watching?</h1>
+        <div class="profiles-container">
+            <!-- Engene Profile - Now Customizable -->
+            <div class="profile">
+                <!-- Clicking the main area goes to engene.html -->
+                <div class="profile-main" onclick="goToEngene()">
+                    <div class="profile-icon">
+                        <img src="images/profiles/engene-profile.jpg" alt="Engene" id="engene-avatar">
+                        <span class="profile-emoji"></span>
+                    </div>
+                    <div class="profile-name">Engene</div>
+                </div>
+                <!-- Only the pencil icon opens avatar selector -->
+                <div class="edit-badge" onclick="openAvatarSelector(event)">
+                    ✏️
+                </div>
+            </div>
+            
+            <!-- About Us - Static -->
+            <a href="about.html" class="profile">
+                <div class="profile-icon">
+                    <img src="images/profiles/about-profile.jpg" alt="About Us">
+                    <span class="profile-emoji"></span>
+                </div>
+                <div class="profile-name">About Us</div>
+            </a>
+
+<!-- Change this in your index.html -->
+<a href="quiz-hub.html" class="profile">
+    <div class="profile-icon">
+        <img src="images/profiles/quiz-profile.jpg" alt="Quiz Hub">
+        <span class="profile-emoji"></span>
+    </div>
+    <div class="profile-name">Quiz Hub</div>
+</a>
+            
+            <!-- Support Me - Static -->
+            <a href="support.html" class="profile">
+                <div class="profile-icon">
+                    <img src="images/profiles/support-profile.jpg" alt="Support Me">
+                    <span class="profile-emoji"></span>
+                </div>
+                <div class="profile-name">Support Me</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Avatar Selector Modal -->
+    <div id="avatarModal" class="avatar-modal">
+        <div class="avatar-modal-content">
+            <h2>Choose Your Engene Avatar</h2>
+            <div class="avatars-grid">
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar1.jpg')">
+                    <img src="images/profiles/avatar1.jpg" alt="Avatar 1">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar2.jpg')">
+                    <img src="images/profiles/avatar2.jpg" alt="Avatar 2">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar3.jpg')">
+                    <img src="images/profiles/avatar3.jpg" alt="Avatar 3">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar4.jpg')">
+                    <img src="images/profiles/avatar4.jpg" alt="Avatar 4">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar5.jpg')">
+                    <img src="images/profiles/avatar5.jpg" alt="Avatar 5">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar6.jpg')">
+                    <img src="images/profiles/avatar6.jpg" alt="Avatar 6">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar7.jpg')">
+                    <img src="images/profiles/avatar7.jpg" alt="Avatar 7">
+                </div>
+                <div class="avatar-option" onclick="selectAvatar('images/profiles/avatar8.jpg')">
+                    <img src="images/profiles/avatar8.jpg" alt="Avatar 8">
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="cancel-btn" onclick="closeAvatarModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/avatar-manager.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

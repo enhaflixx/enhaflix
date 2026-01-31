@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHA-FLIX - About</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="about-page" class="page active">
+        <header class="simple-header">
+            <a href="index.html" class="back-button">← Back to Profiles</a>
+            <div class="header-title">About ENHA-FLIX</div>
+        </header>
+
+        <div class="about-content">
+    <h1>About ENHA-FLIX</h1>
+    <p>Welcome to ENHA-FLIX, your ultimate destination for all things ENHYPEN!</p>
+    <p>This is a fan-made platform dedicated to organizing and sharing ENHYPEN's content including music videos, variety shows, and much more!</p>
+    <p>For any query, contact enhaflixx@gmail.com</p>
+    
+    <div class="creator-section">
+        <h2> Created by Engene for Engenes </h2>
+        <p>Connect with me on social media:</p>
+        
+        <div class="social-links">
+    <!-- TikTok with SVG -->
+    <a href="https://www.tiktok.com/@enhaflixx" 
+       target="_blank" 
+       class="social-link tiktok-link"
+       title="Follow me on TikTok">
+        <div class="social-icon">
+            <svg class="tiktok-svg" viewBox="0 0 24 24">
+                <path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/>
+            </svg>
+        </div>
+        <span>TikTok</span>
+    </a>
+    
+    <!-- X (Twitter) with SVG -->
+    <a href="https://twitter.com/enhaflixx" 
+       target="_blank" 
+       class="social-link twitter-link"
+       title="Follow me on X (Twitter)">
+        <div class="social-icon">
+            <svg class="twitter-svg" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+        </div>
+        <span>X (Twitter)</span>
+    </a>
+</div>
+
+<!-- Feedback Section -->
+<div class="feedback-section">
+    <h2>Help Improve ENHA-FLIX!</h2>
+    <p>Your feedback helps make this site better for all Engenes. Share your thoughts, suggestions, or report issues.</p>
+    
+
+        <!-- Main Feedback Form Link -->
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfS0hAv8rxWLxEJy0lvrXVad1_PtIxmgUTjDrKqNnpaZfyuFQ/viewform?usp=header" 
+           target="_blank" 
+           class="main-feedback-link">
+            <div class="form-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5.04-6.71l-2.75 3.54-1.96-2.36L6.5 17h11l-3.54-4.71z"/>
+                </svg>
+            </div>
+            <div class="form-text">
+                <h3>Complete Feedback Form</h3>
+                <p>Take our detailed survey to help shape ENHA-FLIX's future!</p>
+            </div>
+            <div class="form-arrow">→</div>
+        </a>
+    </div>
+    
+    <p class="feedback-note">All feedback is anonymous and greatly appreciated!</p>
+</div>
+
+<script>
+// Function to open Google Form with pre-filled data
+function openFeedbackForm(type = 'general') {
+    // Replace with your actual Google Form URL
+    const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfS0hAv8rxWLxEJy0lvrXVad1_PtIxmgUTjDrKqNnpaZfyuFQ/viewform?usp=header';
+    
+    // You can add URL parameters if your form supports them
+    let finalUrl = formUrl;
+    
+    if (type === 'suggestion') {
+        finalUrl += '?entry.1234567890=Suggestion'; // Replace with your field ID
+    } else if (type === 'bug') {
+        finalUrl += '?entry.1234567890=Bug Report';
+    } else if (type === 'content') {
+        finalUrl += '?entry.1234567890=Content Request';
+    }
+    
+    window.open(finalUrl, '_blank');
+}
+
+// Update button onclick events
+document.addEventListener('DOMContentLoaded', function() {
+    // Update the buttons in your HTML
+    document.querySelector('.suggestion-btn').onclick = () => openFeedbackForm('suggestion');
+    document.querySelector('.bug-btn').onclick = () => openFeedbackForm('bug');
+    document.querySelector('.content-btn').onclick = () => openFeedbackForm('content');
+});
+</script>
+    
+    <div class="disclaimer-section">
+        <h2>Disclaimer</h2>
+        <p>This is a non-profit fan project. All content rights belong to BELIFT LAB and HYBE. Support ENHYPEN by purchasing their official albums and merchandise!</p>
+    </div>
+</div>
+    </div>
+                
+    <script src="scripts/config.js"></script>
+</body>
+</html>

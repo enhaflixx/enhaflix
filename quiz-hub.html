@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENHYPEN Quiz Center - ENHA-FLIX</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .quiz-hub {
+            padding: 80px 20px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hub-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .hub-subtitle {
+            text-align: center;
+            color: #ccc;
+            margin-bottom: 50px;
+            font-size: 1.2rem;
+        }
+
+        .quizzes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .quiz-card {
+            background: #181818;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .quiz-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .quiz-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .quiz-info {
+            padding: 20px;
+        }
+
+        .quiz-name {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .quiz-description {
+            color: #aaa;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .quiz-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .start-quiz-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .start-quiz-btn:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="header-logo">ENHA-FLIX</a>
+    </header>
+
+    <div class="quiz-hub">
+        <h1 class="hub-title">ENHYPEN Quiz Center</h1>
+        <p class="hub-subtitle">Discover more about ENHYPEN and yourself!</p>
+        
+        <div class="quizzes-grid">
+            <!-- Member Personality Quiz -->
+            <div class="quiz-card" onclick="location.href='member-quiz.html'">
+                <img src="images/quiz/hub/member-personality.jpg" alt="Member Quiz" class="quiz-image">
+                <div class="quiz-info">
+                    <h3 class="quiz-name">Which ENHYPEN Member Are You?</h3>
+                    <p class="quiz-description">Discover which ENHYPEN member matches your personality through fun questions!</p>
+                    <div class="quiz-meta">
+                        <span>8 questions</span>
+                        <span>Personality</span>
+                    </div>
+                    <button class="start-quiz-btn">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Era Quiz -->
+            <div class="quiz-card" onclick="location.href='era-quiz.html'">
+                <img src="images/quiz/hub/era-quiz.jpg" alt="Era Quiz" class="quiz-image">
+                <div class="quiz-info">
+                    <h3 class="quiz-name">Which ENHYPEN Era Are You?</h3>
+                    <p class="quiz-description">Find out which ENHYPEN comeback era best represents your style and personality!</p>
+                    <div class="quiz-meta">
+                        <span>10 questions</span>
+                        <span>Eras & Concepts</span>
+                    </div>
+                    <button class="start-quiz-btn">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Song Quiz -->
+            <div class="quiz-card" onclick="location.href='song-quiz.html'">
+                <img src="images/quiz/hub/song-quiz.jpg" alt="Song Quiz" class="quiz-image">
+                <div class="quiz-info">
+                    <h3 class="quiz-name">Which ENHYPEN Song Matches Your Mood?</h3>
+                    <p class="quiz-description">Get personalized ENHYPEN song recommendations based on your current mood!</p>
+                    <div class="quiz-meta">
+                        <span>10 questions</span>
+                        <span>Music & Mood</span>
+                    </div>
+                    <button class="start-quiz-btn">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Album Quiz -->
+            <div class="quiz-card" onclick="location.href='album-quiz.html'">
+                <img src="images/quiz/hub/album-quiz.jpg" alt="Album Quiz" class="quiz-image">
+                <div class="quiz-info">
+                    <h3 class="quiz-name">Which ENHYPEN Album Matches Your Energy?</h3>
+                    <p class="quiz-description">Take this quiz to find out which ENHYPEN album matches your energy!</p>
+                    <div class="quiz-meta">
+                        <span>10 questions</span>
+                        <span>Albums</span>
+                    </div>
+                    <button class="start-quiz-btn">Start Quiz</button>
+                </div>
+            </div>
+
+            <!-- Dark Moon Quiz -->
+            <div class="quiz-card" onclick="location.href='moon-quiz.html'">
+                <img src="images/quiz/hub/moon-quiz.jpg" alt="Dark Moon Quiz" class="quiz-image">
+                <div class="quiz-info">
+                    <h3 class="quiz-name">Which DARK MOON Character Are You?</h3>
+                    <p class="quiz-description">Take this quiz to find out what Dark Moon character you are!</p>
+                    <div class="quiz-meta">
+                        <span>10 questions</span>
+                        <span>Dark Moon</span>
+                    </div>
+                    <button class="start-quiz-btn">Start Quiz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
