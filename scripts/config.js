@@ -757,751 +757,751 @@ const categoriesConfig = {
             { 
                 name: "EN-O'CLOCK EP.1", 
                 url: "https://www.youtube.com/watch?v=TNuG0Ns-xVU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=130", 
-                thumbnail: "images/en o clock/enoclock-1.jpg",
+                thumbnail: "images/enoclock/enoclock-1.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.2", 
                 url: "https://www.youtube.com/watch?v=UI1EpUEkCvM&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=129", 
-                thumbnail: "images/en o clock/enoclock-2.jpg",
+                thumbnail: "images/enoclock/enoclock-2.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.3", 
                 url: "https://www.youtube.com/watch?v=vgESPiIXz4o&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=128", 
-                thumbnail: "images/en o clock/enoclock-3.jpg",
+                thumbnail: "images/enoclock/enoclock-3.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.4", 
                 url: "https://www.youtube.com/watch?v=y4LoIlTVupw&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=127", 
-                thumbnail: "images/en o clock/enoclock-4.jpg",
+                thumbnail: "images/enoclock/enoclock-4.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.5", 
                 url: "https://www.youtube.com/watch?v=Ezb1M4xWasY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=126", 
-                thumbnail: "images/en o clock/enoclock-5.jpg",
+                thumbnail: "images/enoclock/enoclock-5.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.6", 
                 url: "https://www.youtube.com/watch?v=fg0Q7s2mwIg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=125", 
-                thumbnail: "images/en o clock/enoclock-6.jpg",
+                thumbnail: "images/enoclock/enoclock-6.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.7", 
                 url: "https://www.youtube.com/watch?v=wBtlDUO1mbk&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=124", 
-                thumbnail: "images/en o clock/enoclock-7.jpg",
+                thumbnail: "images/enoclock/enoclock-7.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.8", 
                 url: "https://www.youtube.com/watch?v=BsI2CfKDr1c&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=123", 
-                thumbnail: "images/en o clock/enoclock-8.jpg",
+                thumbnail: "images/enoclock/enoclock-8.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.9", 
                 url: "https://www.youtube.com/watch?v=VKs2EQhTvKI&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=122", 
-                thumbnail: "images/en o clock/enoclock-9.jpg",
+                thumbnail: "images/enoclock/enoclock-9.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.10", 
                 url: "https://www.youtube.com/watch?v=iTV9jtXlG8A&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=121", 
-                thumbnail: "images/en o clock/enoclock-10.jpg",
+                thumbnail: "images/enoclock/enoclock-10.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.11", 
                 url: "https://www.youtube.com/watch?v=X8XTlHXDr_M&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=120", 
-                thumbnail: "images/en o clock/enoclock-11.jpg",
+                thumbnail: "images/enoclock/enoclock-11.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.12", 
                 url: "https://www.youtube.com/watch?v=D9yV-W9DvJk&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=119", 
-                thumbnail: "images/en o clock/enoclock-12.jpg",
+                thumbnail: "images/enoclock/enoclock-12.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.13", 
                 url: "https://www.youtube.com/watch?v=qNp4k0IGXyw&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=118", 
-                thumbnail: "images/en o clock/enoclock-13.jpg",
+                thumbnail: "images/enoclock/enoclock-13.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.14", 
                 url: "https://www.youtube.com/watch?v=0y3qQ1KIeKo&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=117", 
-                thumbnail: "images/en o clock/enoclock-14.jpg",
+                thumbnail: "images/enoclock/enoclock-14.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.15", 
                 url: "https://www.youtube.com/watch?v=yHaUnX0PjsU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=116", 
-                thumbnail: "images/en o clock/enoclock-15.jpg",
+                thumbnail: "images/enoclock/enoclock-15.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.16", 
                 url: "https://www.youtube.com/watch?v=3M8gemp-19c&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=115", 
-                thumbnail: "images/en o clock/enoclock-16.jpg",
+                thumbnail: "images/enoclock/enoclock-16.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.17", 
                 url: "https://www.youtube.com/watch?v=JtEtItRBsVg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=114", 
-                thumbnail: "images/en o clock/enoclock-17.jpg",
+                thumbnail: "images/enoclock/enoclock-17.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.18", 
                 url: "https://www.youtube.com/watch?v=kDaK8pgxFVU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=113", 
-                thumbnail: "images/en o clock/enoclock-18.jpg",
+                thumbnail: "images/enoclock/enoclock-18.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.19", 
                 url: "https://www.youtube.com/watch?v=xIRZYNgozeA&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=112", 
-                thumbnail: "images/en o clock/enoclock-19.jpg",
+                thumbnail: "images/enoclock/enoclock-19.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.20", 
                 url: "https://www.youtube.com/watch?v=tJqqkOsEe1o&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=111", 
-                thumbnail: "images/en o clock/enoclock-20.jpg",
+                thumbnail: "images/enoclock/enoclock-20.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.21", 
                 url: "https://www.youtube.com/watch?v=dq6zFS6tM3E&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=110", 
-                thumbnail: "images/en o clock/enoclock-21.jpg",
+                thumbnail: "images/enoclock/enoclock-21.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.22", 
                 url: "https://www.youtube.com/watch?v=4rHvUgG-DWU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=109", 
-                thumbnail: "images/en o clock/enoclock-22.jpg",
+                thumbnail: "images/enoclock/enoclock-22.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.23", 
                 url: "https://www.youtube.com/watch?v=xcboCVNSel0&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=108", 
-                thumbnail: "images/en o clock/enoclock-23.jpg",
+                thumbnail: "images/enoclock/enoclock-23.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.24", 
                 url: "https://www.youtube.com/watch?v=N0iM2Kq-NwY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=107", 
-                thumbnail: "images/en o clock/enoclock-24.jpg",
+                thumbnail: "images/enoclock/enoclock-24.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.25", 
                 url: "https://www.youtube.com/watch?v=cky57UKimIo&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=106", 
-                thumbnail: "images/en o clock/enoclock-25.jpg",
+                thumbnail: "images/enoclock/enoclock-25.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.26", 
                 url: "https://www.youtube.com/watch?v=1DIP6YsOZwY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=105", 
-                thumbnail: "images/en o clock/enoclock-26.jpg",
+                thumbnail: "images/enoclock/enoclock-26.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.27", 
                 url: "https://www.youtube.com/watch?v=UsK1-E3syAQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=104", 
-                thumbnail: "images/en o clock/enoclock-27.jpg",
+                thumbnail: "images/enoclock/enoclock-27.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.28", 
                 url: "https://www.youtube.com/watch?v=l7O2ik5iRPs&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=103", 
-                thumbnail: "images/en o clock/enoclock-28.jpg",
+                thumbnail: "images/enoclock/enoclock-28.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.29", 
                 url: "https://www.youtube.com/watch?v=x-artYHc974&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=102", 
-                thumbnail: "images/en o clock/enoclock-29.jpg",
+                thumbnail: "images/enoclock/enoclock-29.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.30", 
                 url: "https://www.youtube.com/watch?v=1PcB3sqgeXc&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=101", 
-                thumbnail: "images/en o clock/enoclock-30.jpg",
+                thumbnail: "images/enoclock/enoclock-30.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.31", 
                 url: "https://www.youtube.com/watch?v=QYrLPeagciQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=100", 
-                thumbnail: "images/en o clock/enoclock-31.jpg",
+                thumbnail: "images/enoclock/enoclock-31.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.32", 
                 url: "https://www.youtube.com/watch?v=wNzOIPJrj6o&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=99", 
-                thumbnail: "images/en o clock/enoclock-32.jpg",
+                thumbnail: "images/enoclock/enoclock-32.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.33", 
                 url: "https://www.youtube.com/watch?v=9RP_ClEsn_w&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=98", 
-                thumbnail: "images/en o clock/enoclock-33.jpg",
+                thumbnail: "images/enoclock/enoclock-33.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.34", 
                 url: "https://www.youtube.com/watch?v=1ARpgiWAe54&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=97", 
-                thumbnail: "images/en o clock/enoclock-34.jpg",
+                thumbnail: "images/enoclock/enoclock-34.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.35", 
                 url: "https://www.youtube.com/watch?v=P4RKbqRRkxQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=96", 
-                thumbnail: "images/en o clock/enoclock-35.jpg",
+                thumbnail: "images/enoclock/enoclock-35.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.36", 
                 url: "https://www.youtube.com/watch?v=_EvPd5coJCE&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=95", 
-                thumbnail: "images/en o clock/enoclock-36.jpg",
+                thumbnail: "images/enoclock/enoclock-36.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.37", 
                 url: "https://www.youtube.com/watch?v=xU7-qbVvxWI&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=94", 
-                thumbnail: "images/en o clock/enoclock-37.jpg",
+                thumbnail: "images/enoclock/enoclock-37.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.38", 
                 url: "https://www.youtube.com/watch?v=GAV1vyu0Oa0&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=93", 
-                thumbnail: "images/en o clock/enoclock-38.jpg",
+                thumbnail: "images/enoclock/enoclock-38.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.39", 
                 url: "https://www.youtube.com/watch?v=BBNN8i4DKso&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=92", 
-                thumbnail: "images/en o clock/enoclock-39.jpg",
+                thumbnail: "images/enoclock/enoclock-39.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.40", 
                 url: "https://www.youtube.com/watch?v=hP5ETtYSM4o&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=91", 
-                thumbnail: "images/en o clock/enoclock-40.jpg",
+                thumbnail: "images/enoclock/enoclock-40.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.41", 
                 url: "https://www.youtube.com/watch?v=u3IVuMMpS74&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=90", 
-                thumbnail: "images/en o clock/enoclock-41.jpg",
+                thumbnail: "images/enoclock/enoclock-41.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.42", 
                 url: "https://www.youtube.com/watch?v=OuhVMNqfUvA&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=88", 
-                thumbnail: "images/en o clock/enoclock-42.jpg",
+                thumbnail: "images/enoclock/enoclock-42.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.43", 
                 url: "https://www.youtube.com/watch?v=q-cdjJ082WA&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=87", 
-                thumbnail: "images/en o clock/enoclock-43.jpg",
+                thumbnail: "images/enoclock/enoclock-43.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.44", 
                 url: "https://www.youtube.com/watch?v=poYYb_5RhTw&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=86", 
-                thumbnail: "images/en o clock/enoclock-44.jpg",
+                thumbnail: "images/enoclock/enoclock-44.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.45", 
                 url: "https://www.youtube.com/watch?v=5nR9MnfzdiM&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=85", 
-                thumbnail: "images/en o clock/enoclock-45.jpg",
+                thumbnail: "images/enoclock/enoclock-45.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.46", 
                 url: "https://www.youtube.com/watch?v=8llW9bZTvXc&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=84", 
-                thumbnail: "images/en o clock/enoclock-46.jpg",
+                thumbnail: "images/enoclock/enoclock-46.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.47", 
                 url: "https://www.youtube.com/watch?v=Z-sTlRFHdZ4&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=83", 
-                thumbnail: "images/en o clock/enoclock-47.jpg",
+                thumbnail: "images/enoclock/enoclock-47.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.48", 
                 url: "https://www.youtube.com/watch?v=0izUHAu8EL4&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=82", 
-                thumbnail: "images/en o clock/enoclock-48.jpg",
+                thumbnail: "images/enoclock/enoclock-48.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.49", 
                 url: "https://www.youtube.com/watch?v=nSYFinm0mKk&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=81", 
-                thumbnail: "images/en o clock/enoclock-49.jpg",
+                thumbnail: "images/enoclock/enoclock-49.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.50", 
                 url: "https://www.youtube.com/watch?v=bsFaMNbbhvs&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=80", 
-                thumbnail: "images/en o clock/enoclock-50.jpg",
+                thumbnail: "images/enoclock/enoclock-50.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.51", 
                 url: "https://www.youtube.com/watch?v=Zc_CtMCCKCY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=79", 
-                thumbnail: "images/en o clock/enoclock-51.jpg",
+                thumbnail: "images/enoclock/enoclock-51.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.52", 
                 url: "https://www.youtube.com/watch?v=4UuRRsYRQPg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=78", 
-                thumbnail: "images/en o clock/enoclock-52.jpg",
+                thumbnail: "images/enoclock/enoclock-52.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.53", 
                 url: "https://www.youtube.com/watch?v=qdupoVcnSwM&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=77", 
-                thumbnail: "images/en o clock/enoclock-53.jpg",
+                thumbnail: "images/enoclock/enoclock-53.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.54", 
                 url: "https://www.youtube.com/watch?v=T10ApOiUz7E&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=76", 
-                thumbnail: "images/en o clock/enoclock-54.jpg",
+                thumbnail: "images/enoclock/enoclock-54.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.55", 
                 url: "https://www.youtube.com/watch?v=fnhYW723uU0&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=75", 
-                thumbnail: "images/en o clock/enoclock-55.jpg",
+                thumbnail: "images/enoclock/enoclock-55.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.56", 
                 url: "https://www.youtube.com/watch?v=SVHoVrjh8N8&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=74", 
-                thumbnail: "images/en o clock/enoclock-56.jpg",
+                thumbnail: "images/enoclock/enoclock-56.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.57", 
                 url: "https://www.youtube.com/watch?v=zeJuFeRzblw&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=73", 
-                thumbnail: "images/en o clock/enoclock-57.jpg",
+                thumbnail: "images/enoclock/enoclock-57.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.58", 
                 url: "https://www.youtube.com/watch?v=RQXTvWpuXjQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=72", 
-                thumbnail: "images/en o clock/enoclock-58.jpg",
+                thumbnail: "images/enoclock/enoclock-58.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.59", 
                 url: "https://www.youtube.com/watch?v=oocDf-mSp4k&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=71", 
-                thumbnail: "images/en o clock/enoclock-59.jpg",
+                thumbnail: "images/enoclock/enoclock-59.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.60", 
                 url: "https://www.youtube.com/watch?v=Jg2cyRUqYMo&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=70", 
-                thumbnail: "images/en o clock/enoclock-60.jpg",
+                thumbnail: "images/enoclock/enoclock-60.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.61", 
                 url: "https://www.youtube.com/watch?v=Ku2p-XnrY8A&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=68", 
-                thumbnail: "images/en o clock/enoclock-61.jpg",
+                thumbnail: "images/enoclock/enoclock-61.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.62", 
                 url: "https://www.youtube.com/watch?v=7V3Z-lRdc6Y&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=67", 
-                thumbnail: "images/en o clock/enoclock-62.jpg",
+                thumbnail: "images/enoclock/enoclock-62.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.63", 
                 url: "https://www.youtube.com/watch?v=ot2shkEc27A&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=66", 
-                thumbnail: "images/en o clock/enoclock-63.jpg",
+                thumbnail: "images/enoclock/enoclock-63.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.64", 
                 url: "https://www.youtube.com/watch?v=ciE4mjPjLlA&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=65", 
-                thumbnail: "images/en o clock/enoclock-64.jpg",
+                thumbnail: "images/enoclock/enoclock-64.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.65", 
                 url: "https://www.youtube.com/watch?v=4jtb6aRIXeo&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=64", 
-                thumbnail: "images/en o clock/enoclock-65.jpg",
+                thumbnail: "images/enoclock/enoclock-65.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.66", 
                 url: "https://www.youtube.com/watch?v=VMBUmF72BKA&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=63", 
-                thumbnail: "images/en o clock/enoclock-66.jpg",
+                thumbnail: "images/enoclock/enoclock-66.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.67", 
                 url: "https://www.youtube.com/watch?v=6hjV0KxVWZo&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=62", 
-                thumbnail: "images/en o clock/enoclock-67.jpg",
+                thumbnail: "images/enoclock/enoclock-67.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.68", 
                 url: "https://www.youtube.com/watch?v=M2wI4Mur2vg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=61", 
-                thumbnail: "images/en o clock/enoclock-68.jpg",
+                thumbnail: "images/enoclock/enoclock-68.jpg",
                 description: "EN-O'CLOCK"
             },
  { 
                 name: "EN-O'CLOCK EP.69", 
                 url: "https://www.youtube.com/watch?v=xp5OQVm58Aw&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=60", 
-                thumbnail: "images/en o clock/enoclock-69.jpg",
+                thumbnail: "images/enoclock/enoclock-69.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.70", 
                 url: "https://www.youtube.com/watch?v=Volcj_C5xTY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=59", 
-                thumbnail: "images/en o clock/enoclock-70.jpg",
+                thumbnail: "images/enoclock/enoclock-70.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.71", 
                 url: "https://www.youtube.com/watch?v=aOKd3zD3R7w&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=58", 
-                thumbnail: "images/en o clock/enoclock-71.jpg",
+                thumbnail: "images/enoclock/enoclock-71.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.72", 
                 url: "https://www.youtube.com/watch?v=SuRrqcHL3HM&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=57", 
-                thumbnail: "images/en o clock/enoclock-72.jpg",
+                thumbnail: "images/enoclock/enoclock-72.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.73", 
                 url: "https://www.youtube.com/watch?v=2T7oyoh606c&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=56", 
-                thumbnail: "images/en o clock/enoclock-73.jpg",
+                thumbnail: "images/enoclock/enoclock-73.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.74", 
                 url: "https://www.youtube.com/watch?v=hNOc3IaYPUQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=55", 
-                thumbnail: "images/en o clock/enoclock-74.jpg",
+                thumbnail: "images/enoclock/enoclock-74.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.75", 
                 url: "https://www.youtube.com/watch?v=A11tBtd6lB0&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=54", 
-                thumbnail: "images/en o clock/enoclock-75.jpg",
+                thumbnail: "images/enoclock/enoclock-75.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.76", 
                 url: "https://www.youtube.com/watch?v=MUMxjCfG8a8&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=52", 
-                thumbnail: "images/en o clock/enoclock-76.jpg",
+                thumbnail: "images/enoclock/enoclock-76.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.77", 
                 url: "https://www.youtube.com/watch?v=RUj41q9D9Co&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=51", 
-                thumbnail: "images/en o clock/enoclock-77.jpg",
+                thumbnail: "images/enoclock/enoclock-77.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.78", 
                 url: "https://www.youtube.com/watch?v=VOxBD0cDJZc&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=50", 
-                thumbnail: "images/en o clock/enoclock-78.jpg",
+                thumbnail: "images/enoclock/enoclock-78.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.79", 
                 url: "https://www.youtube.com/watch?v=abk5yh43nHg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=49", 
-                thumbnail: "images/en o clock/enoclock-79.jpg",
+                thumbnail: "images/enoclock/enoclock-79.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.80", 
                 url: "https://www.youtube.com/watch?v=VgEzWwaO4jw&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=48", 
-                thumbnail: "images/en o clock/enoclock-80.jpg",
+                thumbnail: "images/enoclock/enoclock-80.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.81", 
                 url: "https://www.youtube.com/watch?v=bTL0OK5s4tQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=47", 
-                thumbnail: "images/en o clock/enoclock-81.jpg",
+                thumbnail: "images/enoclock/enoclock-81.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.82", 
                 url: "https://www.youtube.com/watch?v=mpkj97irya4&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=46", 
-                thumbnail: "images/en o clock/enoclock-82.jpg",
+                thumbnail: "images/enoclock/enoclock-82.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.83", 
                 url: "https://www.youtube.com/watch?v=DbjPWFYWQwU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=45", 
-                thumbnail: "images/en o clock/enoclock-83.jpg",
+                thumbnail: "images/enoclock/enoclock-83.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.84", 
                 url: "https://www.youtube.com/watch?v=aabFPyoWiBg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=44", 
-                thumbnail: "images/en o clock/enoclock-84.jpg",
+                thumbnail: "images/enoclock/enoclock-84.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.85", 
                 url: "https://www.youtube.com/watch?v=0od_bz4wr_s&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=43", 
-                thumbnail: "images/en o clock/enoclock-85.jpg",
+                thumbnail: "images/enoclock/enoclock-85.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.86", 
                 url: "https://www.youtube.com/watch?v=qLvqJxkA0YU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=42", 
-                thumbnail: "images/en o clock/enoclock-86.jpg",
+                thumbnail: "images/enoclock/enoclock-86.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.87", 
                 url: "https://www.youtube.com/watch?v=_8eoa7HhkwY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=41", 
-                thumbnail: "images/en o clock/enoclock-87.jpg",
+                thumbnail: "images/enoclock/enoclock-87.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.88", 
                 url: "https://www.youtube.com/watch?v=05_knAlBupU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=40", 
-                thumbnail: "images/en o clock/enoclock-88.jpg",
+                thumbnail: "images/enoclock/enoclock-88.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.89", 
                 url: "https://www.youtube.com/watch?v=WRn2r27c_1Y&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=39", 
-                thumbnail: "images/en o clock/enoclock-89.jpg",
+                thumbnail: "images/enoclock/enoclock-89.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.90", 
                 url: "https://www.youtube.com/watch?v=6tnAEiHayGk&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=38", 
-                thumbnail: "images/en o clock/enoclock-90.jpg",
+                thumbnail: "images/enoclock/enoclock-90.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.91", 
                 url: "https://www.youtube.com/watch?v=wjwoTlnB5OE&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=37", 
-                thumbnail: "images/en o clock/enoclock-91.jpg",
+                thumbnail: "images/enoclock/enoclock-91.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.92", 
                 url: "https://www.youtube.com/watch?v=Ro2lhrav6iM&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=36", 
-                thumbnail: "images/en o clock/enoclock-92.jpg",
+                thumbnail: "images/enoclock/enoclock-92.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.93", 
                 url: "https://www.youtube.com/watch?v=NDIsfATnLwE&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=35", 
-                thumbnail: "images/en o clock/enoclock-93.jpg",
+                thumbnail: "images/enoclock/enoclock-93.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.94", 
                 url: "https://www.youtube.com/watch?v=vuEkcPhwCW4&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=34", 
-                thumbnail: "images/en o clock/enoclock-94.jpg",
+                thumbnail: "images/enoclock/enoclock-94.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.95", 
                 url: "https://www.youtube.com/watch?v=pnIaFsUv5G8&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=33", 
-                thumbnail: "images/en o clock/enoclock-95.jpg",
+                thumbnail: "images/enoclock/enoclock-95.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.96", 
                 url: "https://www.youtube.com/watch?v=5WHlELTespc&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=32", 
-                thumbnail: "images/en o clock/enoclock-96.jpg",
+                thumbnail: "images/enoclock/enoclock-96.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.97", 
                 url: "https://www.youtube.com/watch?v=G9a5yYpiqZM&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=31", 
-                thumbnail: "images/en o clock/enoclock-97.jpg",
+                thumbnail: "images/enoclock/enoclock-97.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.98", 
                 url: "https://www.youtube.com/watch?v=wa6OuirfOsU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=30", 
-                thumbnail: "images/en o clock/enoclock-98.jpg",
+                thumbnail: "images/enoclock/enoclock-98.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.99", 
                 url: "https://www.youtube.com/watch?v=uws9EHLrZcU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=29", 
-                thumbnail: "images/en o clock/enoclock-99.jpg",
+                thumbnail: "images/enoclock/enoclock-99.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.100", 
                 url: "https://www.youtube.com/watch?v=8n2geRAeBRY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=27", 
-                thumbnail: "images/en o clock/enoclock-100.jpg",
+                thumbnail: "images/enoclock/enoclock-100.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.101", 
                 url: "https://www.youtube.com/watch?v=Ppr01MFw0SQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=26", 
-                thumbnail: "images/en o clock/enoclock-101.jpg",
+                thumbnail: "images/enoclock/enoclock-101.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.102", 
                 url: "https://www.youtube.com/watch?v=33DdCpW1tGI&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=25", 
-                thumbnail: "images/en o clock/enoclock-102.jpg",
+                thumbnail: "images/enoclock/enoclock-102.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.103", 
                 url: "https://www.youtube.com/watch?v=ei8kXdiFbsE&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=24", 
-                thumbnail: "images/en o clock/enoclock-103.jpg",
+                thumbnail: "images/enoclock/enoclock-103.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.104", 
                 url: "https://www.youtube.com/watch?v=j_oL8qohwmY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=23", 
-                thumbnail: "images/en o clock/enoclock-104.jpg",
+                thumbnail: "images/enoclock/enoclock-104.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.105", 
                 url: "https://www.youtube.com/watch?v=BXfvaO0IwT8&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=22", 
-                thumbnail: "images/en o clock/enoclock-105.jpg",
+                thumbnail: "images/enoclock/enoclock-105.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.106", 
                 url: "https://www.youtube.com/watch?v=Dgrq3wtjKIU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=21", 
-                thumbnail: "images/en o clock/enoclock-106.jpg",
+                thumbnail: "images/enoclock/enoclock-106.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.107", 
                 url: "https://www.youtube.com/watch?v=alyBvkzByUo&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=20", 
-                thumbnail: "images/en o clock/enoclock-107.jpg",
+                thumbnail: "images/enoclock/enoclock-107.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.108", 
                 url: "https://www.youtube.com/watch?v=FpHVhPaeJHs&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=19", 
-                thumbnail: "images/en o clock/enoclock-108.jpg",
+                thumbnail: "images/enoclock/enoclock-108.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.109", 
                 url: "https://www.youtube.com/watch?v=zpxCw3qyz-A&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=18", 
-                thumbnail: "images/en o clock/enoclock-109.jpg",
+                thumbnail: "images/enoclock/enoclock-109.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.110", 
                 url: "https://www.youtube.com/watch?v=Yx66m43W5aQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=17", 
-                thumbnail: "images/en o clock/enoclock-110.jpg",
+                thumbnail: "images/enoclock/enoclock-110.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.111", 
                 url: "https://www.youtube.com/watch?v=E4AVZLPkhTU&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=16", 
-                thumbnail: "images/en o clock/enoclock-111.jpg",
+                thumbnail: "images/enoclock/enoclock-111.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.112", 
                 url: "https://www.youtube.com/watch?v=R_xtErnnB-Q&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=15", 
-                thumbnail: "images/en o clock/enoclock-112.jpg",
+                thumbnail: "images/enoclock/enoclock-112.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.113", 
                 url: "https://www.youtube.com/watch?v=7zbgy0XhlXg&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=14", 
-                thumbnail: "images/en o clock/enoclock-113.jpg",
+                thumbnail: "images/enoclock/enoclock-113.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.114", 
                 url: "https://www.youtube.com/watch?v=ior3hX_SgfI&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=13", 
-                thumbnail: "images/en o clock/enoclock-114.jpg",
+                thumbnail: "images/enoclock/enoclock-114.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.115", 
                 url: "https://www.youtube.com/watch?v=u3PqxWs5S7g&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=11", 
-                thumbnail: "images/en o clock/enoclock-115.jpg",
+                thumbnail: "images/enoclock/enoclock-115.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.116", 
                 url: "https://www.youtube.com/watch?v=PxpUd5bRyhQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=10", 
-                thumbnail: "images/en o clock/enoclock-116.jpg",
+                thumbnail: "images/enoclock/enoclock-116.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.117", 
                 url: "https://www.youtube.com/watch?v=itbnhmwJs0Q&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=9", 
-                thumbnail: "images/en o clock/enoclock-117.jpg",
+                thumbnail: "images/enoclock/enoclock-117.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.118", 
                 url: "https://www.youtube.com/watch?v=ZSGHVwoBDtY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=8", 
-                thumbnail: "images/en o clock/enoclock-118.jpg",
+                thumbnail: "images/enoclock/enoclock-118.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.119", 
                 url: "https://www.youtube.com/watch?v=CDhuqPFzcfs&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=7", 
-                thumbnail: "images/en o clock/enoclock-119.jpg",
+                thumbnail: "images/enoclock/enoclock-119.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.120", 
                 url: "https://www.youtube.com/watch?v=rWgnJBfkHzY&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=6", 
-                thumbnail: "images/en o clock/enoclock-120.jpg",
+                thumbnail: "images/enoclock/enoclock-120.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.121", 
                 url: "https://www.youtube.com/watch?v=UJFjKPq5cx4&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=5", 
-                thumbnail: "images/en o clock/enoclock-121.jpg",
+                thumbnail: "images/enoclock/enoclock-121.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.122", 
                 url: "https://www.youtube.com/watch?v=Pbbgk7FJx6w&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=4", 
-                thumbnail: "images/en o clock/enoclock-122.jpg",
+                thumbnail: "images/enoclock/enoclock-122.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.123", 
                 url: "https://www.youtube.com/watch?v=3_Ze2YZfMPQ&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=3", 
-                thumbnail: "images/en o clock/enoclock-123.jpg",
+                thumbnail: "images/enoclock/enoclock-123.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.124", 
                 url: "https://www.youtube.com/watch?v=z8zf41llrfI&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=2", 
-                thumbnail: "images/en o clock/enoclock-124.jpg",
+                thumbnail: "images/enoclock/enoclock-124.jpg",
                 description: "EN-O'CLOCK"
             },
 { 
                 name: "EN-O'CLOCK EP.125", 
                 url: "https://www.youtube.com/watch?v=H9J5jc5X8rA&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO&index=1", 
-                thumbnail: "images/en o clock/enoclock-125.jpg",
+                thumbnail: "images/enoclock/enoclock-125.jpg",
                 description: "EN-O'CLOCK"
             },
 
