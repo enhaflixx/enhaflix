@@ -942,6 +942,8 @@ document.addEventListener('click', function(e) {
         });
     </script>
 <script>
+
+<script>
 // Temporary debug - shows what happens when clicking content
 document.addEventListener('click', function(e) {
     const contentItem = e.target.closest('.content-item');
@@ -950,6 +952,55 @@ document.addEventListener('click', function(e) {
         console.log('📍 Clicked element:', e.target);
     }
 }, true);
+</script>
+<script>
+// ===== SCROLL ANIMATION - FADE IN CONTENT AS YOU SCROLL =====
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Select all elements you want to fade on scroll
+    const fadeElements = document.querySelectorAll('.content-item, .category, .history-item, .favorite-item');
+    
+    // Add the fade-on-scroll class to all of them
+    fadeElements.forEach(element => {
+        element.classList.add('fade-on-scroll');
+    });
+    
+    // Function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+            rect.bottom >= 0
+        );
+    }
+    
+    // Function to handle scroll - add 'visible' class to elements in viewport
+    function handleScrollAnimation() {
+        fadeElements.forEach(element => {
+            if (isElementInViewport(element)) {
+                element.classList.add('visible');
+            }
+        });
+    }
+    
+    // Run once on page load to show initial visible items
+    handleScrollAnimation();
+    
+    // Run on scroll with throttling for performance
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleScrollAnimation();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+    
+    // Also run on resize
+    window.addEventListener('resize', handleScrollAnimation);
+});
 </script>
 </body>
 </html>
