@@ -2089,3 +2089,577 @@ body {
         font-size: 1.3rem;
     }
 }
+
+/* ========== SMOOTH ANIMATIONS & ENHANCEMENTS ========== */
+
+/* 1. SMOOTH SCROLL BEHAVIOR */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 2. FADE-IN ANIMATION FOR CONTENT AS YOU SCROLL */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fade-in to all content items */
+.content-item {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0; /* Start invisible */
+}
+
+/* Stagger the animations - each item fades in one after another */
+.content-item:nth-child(1) { animation-delay: 0.1s; }
+.content-item:nth-child(2) { animation-delay: 0.2s; }
+.content-item:nth-child(3) { animation-delay: 0.3s; }
+.content-item:nth-child(4) { animation-delay: 0.4s; }
+.content-item:nth-child(5) { animation-delay: 0.5s; }
+.content-item:nth-child(6) { animation-delay: 0.6s; }
+.content-item:nth-child(7) { animation-delay: 0.7s; }
+.content-item:nth-child(8) { animation-delay: 0.8s; }
+.content-item:nth-child(9) { animation-delay: 0.9s; }
+.content-item:nth-child(10) { animation-delay: 1.0s; }
+
+/* 3. ENHANCED HOVER EFFECTS - Netflix style */
+.content-item {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.content-item:hover {
+    transform: scale(1.08) !important;
+    box-shadow: 0 15px 30px rgba(229, 9, 20, 0.3);
+    z-index: 10;
+}
+
+/* 4. SMOOTHER OVERLAY TRANSITION */
+.item-overlay {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    background: linear-gradient(to top, 
+        rgba(0, 0, 0, 0.95) 0%, 
+        rgba(0, 0, 0, 0.7) 50%, 
+        rgba(0, 0, 0, 0) 100%);
+}
+
+.content-item:hover .item-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 5. TITLE AND DESCRIPTION STYLING IN OVERLAY */
+.item-overlay .item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    transform: translateY(10px);
+    transition: transform 0.3s ease 0.1s;
+}
+
+.item-overlay .item-description {
+    font-size: 0.85rem;
+    color: #e0e0e0;
+    transform: translateY(10px);
+    transition: transform 0.3s ease 0.15s;
+}
+
+.content-item:hover .item-overlay .item-title,
+.content-item:hover .item-overlay .item-description {
+    transform: translateY(0);
+}
+
+/* 6. HEART BUTTON ANIMATION */
+.heart-button {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.content-item:hover .heart-button {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.heart-button:hover {
+    transform: scale(1.15) !important;
+    background: #e50914 !important;
+}
+
+/* 7. CATEGORY TITLES WITH SLIDE-IN EFFECT */
+.category-header {
+    opacity: 0;
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Stagger category titles */
+.category:nth-child(1) .category-header { animation-delay: 0.1s; }
+.category:nth-child(2) .category-header { animation-delay: 0.2s; }
+.category:nth-child(3) .category-header { animation-delay: 0.3s; }
+.category:nth-child(4) .category-header { animation-delay: 0.4s; }
+.category:nth-child(5) .category-header { animation-delay: 0.5s; }
+
+/* 8. SUBTLE GLOW EFFECT ON HOVER */
+.content-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0);
+    transition: box-shadow 0.3s ease;
+    pointer-events: none;
+}
+
+.content-item:hover::after {
+    box-shadow: 0 0 30px rgba(229, 9, 20, 0.4);
+}
+
+/* 9. SHOW MORE BUTTON ANIMATION */
+.show-more-btn {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.show-more-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(229, 9, 20, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.show-more-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.3);
+}
+
+.show-more-icon {
+    transition: transform 0.3s ease;
+}
+
+.show-more-btn:hover .show-more-icon {
+    transform: translateY(2px);
+}
+
+.show-more-btn.expanded .show-more-icon {
+    transform: rotate(180deg);
+}
+
+/* 10. CONTINUE WATCHING AND FAVORITES ITEMS ENHANCEMENT */
+.history-item, .favorite-item {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.history-item:nth-child(1), .favorite-item:nth-child(1) { animation-delay: 0.1s; }
+.history-item:nth-child(2), .favorite-item:nth-child(2) { animation-delay: 0.2s; }
+.history-item:nth-child(3), .favorite-item:nth-child(3) { animation-delay: 0.3s; }
+.history-item:nth-child(4), .favorite-item:nth-child(4) { animation-delay: 0.4s; }
+.history-item:nth-child(5), .favorite-item:nth-child(5) { animation-delay: 0.5s; }
+
+.history-item:hover, .favorite-item:hover {
+    transform: scale(1.08) !important;
+}
+
+/* 11. PROGRESS BAR ANIMATION */
+.progress-fill {
+    transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* 12. HOVER ACTION BUTTONS ENHANCEMENT */
+.history-hover-actions, .favorite-hover-actions {
+    transition: opacity 0.3s ease, transform 0.3s ease !important;
+    transform: translateY(10px);
+}
+
+.history-item:hover .history-hover-actions,
+.favorite-item:hover .favorite-hover-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.history-action-btn, .favorite-action-btn {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+    transform: scale(0.9);
+}
+
+.history-item:hover .history-action-btn,
+.favorite-item:hover .favorite-action-btn {
+    transform: scale(1);
+}
+
+.history-action-btn:hover, .favorite-action-btn:hover {
+    transform: scale(1.15) !important;
+}
+
+/* 13. SMOOTH SCROLLING FOR ROWS */
+.content-row {
+    scroll-behavior: smooth;
+    transition: scroll 0.3s ease;
+}
+
+/* 14. SUBTLE PULSE FOR NEW CONTENT (optional) */
+@keyframes newContentPulse {
+    0% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(229, 9, 20, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+}
+
+.content-item.new {
+    animation: newContentPulse 2s infinite;
+}
+
+/* 15. LOADING ANIMATION FOR IMAGES */
+@keyframes imageLoad {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.content-thumbnail img {
+    animation: imageLoad 0.5s ease;
+}
+
+/* 16. VIDEO MODAL ENHANCEMENTS */
+.video-modal.active {
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.video-modal.active .modal-content {
+    animation: modalScaleIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes modalScaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 17. TOAST NOTIFICATION ANIMATION */
+.toast {
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+.toast.show {
+    animation: toastSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes toastSlideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* 18. RESPONSIVE TWEAKS FOR MOBILE */
+@media (max-width: 768px) {
+    .content-item {
+        animation: fadeInUp 0.4s ease forwards;
+    }
+    
+    .content-item:hover {
+        transform: scale(1.03) !important;
+    }
+    
+    .heart-button {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+    .history-hover-actions, .favorite-hover-actions {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== SCROLL-TRIGGERED ANIMATIONS ========== */
+
+/* Initially hide items with opacity 0 */
+.fade-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When item becomes visible, fade it in */
+.fade-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger effect when they become visible */
+.fade-on-scroll.visible:nth-child(1) { transition-delay: 0.1s; }
+.fade-on-scroll.visible:nth-child(2) { transition-delay: 0.2s; }
+.fade-on-scroll.visible:nth-child(3) { transition-delay: 0.3s; }
+.fade-on-scroll.visible:nth-child(4) { transition-delay: 0.4s; }
+.fade-on-scroll.visible:nth-child(5) { transition-delay: 0.5s; }
+.fade-on-scroll.visible:nth-child(6) { transition-delay: 0.6s; }
+.fade-on-scroll.visible:nth-child(7) { transition-delay: 0.7s; }
+.fade-on-scroll.visible:nth-child(8) { transition-delay: 0.8s; }
+
+/* Categories fade on scroll */
+.category {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.category.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger categories */
+.category.visible:nth-child(1) { transition-delay: 0.1s; }
+.category.visible:nth-child(2) { transition-delay: 0.2s; }
+.category.visible:nth-child(3) { transition-delay: 0.3s; }
+.category.visible:nth-child(4) { transition-delay: 0.4s; }
+.category.visible:nth-child(5) { transition-delay: 0.5s; }
+
+/* ========== PROFILE PAGE STAGGER ANIMATIONS ========== */
+
+/* Profile title animation */
+.profile-title {
+    opacity: 0;
+    animation: fadeInDown 0.6s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Individual profile animations */
+.profile {
+    opacity: 0;
+    animation: fadeInUp 0.5s ease forwards;
+    /* SMOOTH TRANSITION FOR HOVER - this is the key! */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    /* transform-origin: center; /* Keeps scaling centered */
+    will-change: transform; /* Helps performance */
+}
+
+/* Stagger each profile */
+.profile:nth-child(1) { animation-delay: 0.2s; } /* Engene */
+.profile:nth-child(2) { animation-delay: 0.4s; } /* About Us */
+.profile:nth-child(3) { animation-delay: 0.6s; } /* Quiz Hub */
+.profile:nth-child(4) { animation-delay: 0.8s; } /* Support Me */
+
+/* SMOOTH HOVER - scales up slowly */
+.profile:hover {
+    transform: scale(1.08) translateY(-5px) !important;
+    /* No transition needed here - it uses the transition above */
+    z-index: 10;
+}
+
+/* Profile icon hover */
+.profile-icon {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.profile:hover .profile-icon {
+    border-color: #e50914 !important;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.5);
+}
+
+/* Profile name hover */
+.profile-name {
+    transition: all 0.4s ease !important;
+}
+
+.profile:hover .profile-name {
+    color: #e50914 !important;
+}
+
+/* Edit badge appear animation */
+.edit-badge {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.profile:hover .edit-badge {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.edit-badge:hover {
+    background: #e50914 !important;
+    transform: scale(1.15) rotate(90deg) !important;
+}
+
+/* Fade in up animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile {
+        animation: fadeInUp 0.4s ease forwards;
+        transition: all 0.3s ease !important;
+    }
+    
+    .profile:nth-child(1) { animation-delay: 0.1s; }
+    .profile:nth-child(2) { animation-delay: 0.2s; }
+    .profile:nth-child(3) { animation-delay: 0.3s; }
+    .profile:nth-child(4) { animation-delay: 0.4s; }
+    
+    .profile:hover {
+        transform: scale(1.05) translateY(-3px) !important;
+    }
+}/* Optional: Subtle background shimmer */
+#profile-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.05), transparent);
+    animation: shimmer 4s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* ========== HERO BANNER STAGGER ANIMATION ========== */
+
+/* Hero banner container - fades in */
+.hero-banner {
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Main content container - slides up */
+.banner-content {
+    opacity: 0;
+    animation: slideUp 0.5s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Title - fades and slides */
+.banner-title {
+    opacity: 0;
+    animation: staggerFade 0.5s ease forwards;
+    animation-delay: 0.4s;
+}
+
+/* Description - fades and slides */
+.banner-description {
+    opacity: 0;
+    animation: staggerFade 0.5s ease forwards;
+    animation-delay: 0.6s;
+}
+
+/* Button - pops in */
+.banner-button {
+    opacity: 0;
+    animation: staggerPop 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.8s;
+}
+
+/* Keyframes for staggered effects */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes staggerFade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes staggerPop {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
