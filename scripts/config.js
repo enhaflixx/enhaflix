@@ -490,6 +490,24 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/mv-shine.jpg",
             description: "Official Music Video"
         },
+        { 
+            name: "No Way Back (Ft. So!YoON!)", 
+            url: "https://www.youtube.com/watch?v=3s3BVG798aU", 
+            thumbnail: "images/thumbnails/mv-nowayback.jpg",
+            description: "Official Music Video"
+        },
+        { 
+            name: "Big Girls Don't Cry", 
+            url: "https://www.youtube.com/watch?v=01R62JW9X6Y", 
+            thumbnail: "images/thumbnails/mv-bgdc.jpg",
+            description: "Official Music Video"
+        },
+        { 
+            name: "Stealer (Special edit)", 
+            url: "https://www.youtube.com/watch?v=Mds7WAYiAck", 
+            thumbnail: "images/thumbnails/mv-stealer.jpg",
+            description: "Official Music Video"
+        },
             // ADD MORE B-SIDE MVS HERE
         ]
     },
@@ -1504,6 +1522,12 @@ const categoriesConfig = {
                 thumbnail: "images/enoclock/enoclock-125.jpg",
                 description: "EN-O'CLOCK"
             },
+            { 
+                name: "EN-O'CLOCK EP.126", 
+                url: "https://www.youtube.com/watch?v=yP13gxTYO5w", 
+                thumbnail: "images/enoclock/enoclock-126.jpg",
+                description: "EN-O'CLOCK"
+            },
 
             // ADD MORE EN-O'CLOCK EPISODES HERE
         ],
@@ -1758,6 +1782,11 @@ const categoriesConfig = {
                 name: "Jungwon's lesson day for productive learning", 
                 url: "https://www.youtube.com/watch?v=Q-MSQk1JoPw&list=PLMQ4WMltba-F67iE1rTXm58n5mnFWqSir&index=6", 
                 thumbnail: "images/enlog/enlog-won7.jpg",
+                description: "EN-LoG"
+            },
+                name: "[Vlog] Jungwon's 2025 Vlog", 
+                url: "https://www.youtube.com/watch?v=NxxVNNEb578", 
+                thumbnail: "images/enlog/enlog-won8.jpg",
                 description: "EN-LoG"
             },
             // ADD MORE EN-LOG HERE
