@@ -1784,6 +1784,7 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-won7.jpg",
                 description: "EN-LoG"
             },
+            { 
                 name: "[Vlog] Jungwon's 2025 Vlog", 
                 url: "https://www.youtube.com/watch?v=NxxVNNEb578", 
                 thumbnail: "images/enlog/enlog-won8.jpg",
