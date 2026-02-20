@@ -493,7 +493,7 @@ const categoriesConfig = {
         { 
             name: "No Way Back (Ft. So!YoON!)", 
             url: "https://www.youtube.com/watch?v=3s3BVG798aU", 
-            thumbnail: "images/thumbnails/mv-nowayback.jpg",
+            thumbnail: "images/thumbnails/mv-noway.jpg",
             description: "Official Music Video"
         },
         { 
