@@ -3205,6 +3205,12 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/anime-dm.jpg",
             description: "Dark Moon Anime 2026"
         },
+        { 
+            name: "Dark Moon EP.7", 
+            url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-7?id=12271&ep=206534&page=0&pageSize=100", 
+            thumbnail: "images/thumbnails/anime-dm.jpg",
+            description: "Dark Moon Anime 2026"
+        },
         // ADD OTHER CONTENT HERE
     ]
 },
