@@ -1528,6 +1528,12 @@ const categoriesConfig = {
                 thumbnail: "images/enoclock/enoclock-126.jpg",
                 description: "EN-O'CLOCK"
             },
+            { 
+                name: "EN-O'CLOCK EP.127", 
+                url: "https://www.youtube.com/watch?v=JUvgokwc9_Q&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO", 
+                thumbnail: "images/enoclock/enoclock-126.jpg",
+                description: "EN-O'CLOCK"
+            },
 
             // ADD MORE EN-O'CLOCK EPISODES HERE
         ],
@@ -3208,6 +3214,12 @@ const categoriesConfig = {
         { 
             name: "Dark Moon EP.7", 
             url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-7?id=12271&ep=206534&page=0&pageSize=100", 
+            thumbnail: "images/thumbnails/anime-dm.jpg",
+            description: "Dark Moon Anime 2026"
+        },
+        { 
+            name: "Dark Moon EP.8", 
+            url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-8?id=12271&ep=207336&page=0&pageSize=100", 
             thumbnail: "images/thumbnails/anime-dm.jpg",
             description: "Dark Moon Anime 2026"
         },
