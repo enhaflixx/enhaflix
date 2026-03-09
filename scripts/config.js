@@ -1531,7 +1531,13 @@ const categoriesConfig = {
             { 
                 name: "EN-O'CLOCK EP.127", 
                 url: "https://www.youtube.com/watch?v=JUvgokwc9_Q&list=PLMQ4WMltba-EXWrjvNC18Oj4YEGfZKXkO", 
-                thumbnail: "images/enoclock/enoclock-126.jpg",
+                thumbnail: "images/enoclock/enoclock-127.jpg",
+                description: "EN-O'CLOCK"
+            },
+            { 
+                name: "EN-O'CLOCK EP.128", 
+                url: "https://www.youtube.com/watch?v=p-mO6J3Wrh4", 
+                thumbnail: "images/enoclock/enoclock-128.jpg",
                 description: "EN-O'CLOCK"
             },
 
@@ -1924,6 +1930,12 @@ const categoriesConfig = {
                 name: "A day with Sunghoon and his real life sister", 
                 url: "https://www.youtube.com/watch?v=WPRJs-_dE64&list=PLMQ4WMltba-F67iE1rTXm58n5mnFWqSir&index=4", 
                 thumbnail: "images/enlog/enlog-hoon5.jpg",
+                description: "EN-LoG"
+            },
+           { 
+                name: "[Vlog' Milano Cortina 2026", 
+                url: "https://www.youtube.com/watch?v=Ltd364p7TIQ", 
+                thumbnail: "images/enlog/enlog-hoon6.jpg",
                 description: "EN-LoG"
             },
             // ADD MORE EN-LOG HERE
@@ -3220,6 +3232,12 @@ const categoriesConfig = {
         { 
             name: "Dark Moon EP.8", 
             url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-8?id=12271&ep=207336&page=0&pageSize=100", 
+            thumbnail: "images/thumbnails/anime-dm.jpg",
+            description: "Dark Moon Anime 2026"
+        },
+        { 
+            name: "Dark Moon EP.9", 
+            url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-9?id=12271&ep=207825&page=0&pageSize=100", 
             thumbnail: "images/thumbnails/anime-dm.jpg",
             description: "Dark Moon Anime 2026"
         },
