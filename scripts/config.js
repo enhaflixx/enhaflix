@@ -25,7 +25,7 @@ const CONFIG = {
             title: "ENHYPEN THE SIN : VANISH",
             description: "Experience the ultimate new comeback",
             buttonText: "Watch Now",
-            youtubeId: "https://youtu.be/R6e4tBWxIxE?si=62pgG6JTLupuuvWG",
+            youtubeId: "https://www.youtube.com/watch?v=wXFLzODIdUI&list=RDwXFLzODIdUI&start_radio=1",
             textColor: "#ffffff" // Custom text color
         },
         {
@@ -3238,6 +3238,12 @@ const categoriesConfig = {
         { 
             name: "Dark Moon EP.9", 
             url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-9?id=12271&ep=207825&page=0&pageSize=100", 
+            thumbnail: "images/thumbnails/anime-dm.jpg",
+            description: "Dark Moon Anime 2026"
+        },
+        { 
+            name: "Dark Moon EP.10", 
+            url: "https://kisskh.co/Drama/DARK-MOON--THE-BLOOD-ALTAR---Dark-Moon---Tsuki-no-Saidan/Episode-10?id=12271&ep=208407&page=0&pageSize=100", 
             thumbnail: "images/thumbnails/anime-dm.jpg",
             description: "Dark Moon Anime 2026"
         },
