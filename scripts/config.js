@@ -25,18 +25,9 @@ const CONFIG = {
             title: "ENHYPEN THE SIN : VANISH",
             description: "Experience the ultimate new comeback",
             buttonText: "Watch Now",
-            youtubeId: "https://www.youtube.com/watch?v=wXFLzODIdUI&list=RDwXFLzODIdUI&start_radio=1",
+            youtubeId: "https://youtu.be/R6e4tBWxIxE?si=A4T4WIYXiIifZbMV",
             textColor: "#ffffff" // Custom text color
         },
-        {
-            type: "image",
-            background: "images/thumbnails/hero-banner2.jpg", // Your banner image path
-            title: "ENHYPEN New Album",
-            description: "Check out their latest release with exclusive content",
-            buttonText: "Watch Now", 
-            youtubeId: "https://www.youtube.com/watch?v=wXFLzODIdUI&list=RDwXFLzODIdUI&start_radio=1",
-            textColor: "#ffffff"
-        }
         // Add more banners here as needed
     ]
 };
