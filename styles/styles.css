@@ -2497,9 +2497,10 @@ html {
 
 /* Stagger each profile */
 .profile:nth-child(1) { animation-delay: 0.2s; } /* Engene */
-.profile:nth-child(2) { animation-delay: 0.4s; } /* About Us */
-.profile:nth-child(3) { animation-delay: 0.6s; } /* Quiz Hub */
-.profile:nth-child(4) { animation-delay: 0.8s; } /* Support Me */
+.profile:nth-child(2) { animation-delay: 0.3s; } /* EVAN - NEW */
+.profile:nth-child(3) { animation-delay: 0.4s; } /* About Us */
+.profile:nth-child(4) { animation-delay: 0.5s; } /* Quiz Hub */
+.profile:nth-child(5) { animation-delay: 0.6s; } /* Support Me */
 
 /* SMOOTH HOVER - scales up slowly */
 .profile:hover {
@@ -2563,10 +2564,11 @@ html {
         transition: all 0.3s ease !important;
     }
     
-    .profile:nth-child(1) { animation-delay: 0.1s; }
-    .profile:nth-child(2) { animation-delay: 0.2s; }
-    .profile:nth-child(3) { animation-delay: 0.3s; }
-    .profile:nth-child(4) { animation-delay: 0.4s; }
+    .profile:nth-child(1) { animation-delay: 0.2s; }
+    .profile:nth-child(2) { animation-delay: 0.3s; }
+    .profile:nth-child(3) { animation-delay: 0.4s; }
+    .profile:nth-child(4) { animation-delay: 0.5s; }
+    .profile:nth-child(5) { animation-delay: 0.6s; }
     
     .profile:hover {
         transform: scale(1.05) translateY(-3px) !important;
