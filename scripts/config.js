@@ -2825,7 +2825,7 @@ const categoriesConfig = {
         },
 { 
             name: "ENHYPEN Coachella Week 2", 
-            url: "https://player.vimeo.com/video/1146188277?fl=pl&fe=sh", 
+            url: "https://player.vimeo.com/video/1182373287?fl=pl&fe=sh", 
             thumbnail: "images/thumbnails/enchella-week-two.jpg",
             description: "ENHYPEN Coachella 2025"
         }
