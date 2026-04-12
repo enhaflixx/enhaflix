@@ -1694,7 +1694,7 @@ const categoriesConfig = {
 
   "Jake Covers": [
             { 
-                name: "JAKE - I Don’t Think I’m Okay", 
+                name: "JAKE - I Don’t Think I'm Okay", 
                 url: "https://www.youtube.com/watch?v=yD3gPMdFTts&list=RDyD3gPMdFTts&start_radio=1", 
                 thumbnail: "images/thumbnails/cover-jake.jpg",
                 description: "Jake Cover"
