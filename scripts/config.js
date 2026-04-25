@@ -1734,11 +1734,12 @@ const categoriesConfig = {
 
   "NI-KI Covers": [
             { 
-                name: "'Trendsetter' X 'HUMBLE.' covered by ENHYPEN NI-KI", 
-                url: "https://www.youtube.com/watch?v=2JTBSa7XsjE&list=RD2JTBSa7XsjE&start_radio=1", 
+                name: "NI-KI - LIMBO", 
+                url: "https://www.youtube.com/watch?v=KChyOsjqmfM", 
                 thumbnail: "images/thumbnails/cover-niki.jpg",
                 description: "Ni-ki Cover"
             },
+
             // ADD MORE MEMBER COVERS HERE
         ],
     },
@@ -2632,13 +2633,13 @@ const categoriesConfig = {
                 description: "Concept Film"
             },
 { 
-                name: "ENHYPEN UNTOLD Concept Cinema", 
+                name: "ENHYPEN ROMANCE UNTOLD Concept Cinema", 
                 url: "https://www.youtube.com/watch?v=eYOTtz-7js0", 
                 thumbnail: "images/thumbnails/concept-untold.jpg",
                 description: "Concept Cinema"
             },
 { 
-                name: "ENHYPEN DESIRE Concept Cinema", 
+                name: "ENHYPEN DESIRE UNLEASH Concept Cinema", 
                 url: "https://www.youtube.com/watch?v=FQCkFeI_Vto&list=RDFQCkFeI_Vto&start_radio=1", 
                 thumbnail: "images/thumbnails/concept-desire.jpg",
                 description: "Concept Cinema"
@@ -2787,6 +2788,13 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/choom-sweet-venom.jpg",
                 description: "Studio Choom"
             },
+            { 
+                name: "Trendsetter X HUMBLE. covered by ENHYPEN NI-KI", 
+                url: "https://www.youtube.com/watch?v=2JTBSa7XsjE&list=RD2JTBSa7XsjE&start_radio=1", 
+                thumbnail: "images/thumbnails/choom-niki.jpg",
+                description: "Ni-ki Studio Choom"
+            },
+
 { 
                 name: "ENHYPEN 'XO (Only If You Say Yes)' (4K)", 
                 url: "https://www.youtube.com/watch?v=N7RhqKVfmDc&list=PLooMjMQKCBnXvFS9btFQw-aaBjrDs-q_N&index=32", 
