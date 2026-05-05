@@ -2614,6 +2614,18 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/tour-wtl-jpn2.jpg",
             description: "WTL Tour 2025"
         },
+            { 
+            name: "ENHYPEN BLOOD SAGA SEOUL D1", 
+            url: "https://drive.google.com/file/d/1m-R-LU_vEWztbatHD4g6KsL9Zq8M0Tz5/view?usp=sharing", 
+            thumbnail: "images/thumbnails/tour-bs.jpg",
+            description: "BLOOD SAGA Tour 2026"
+        },
+{ 
+            name: "ENHYPEN BLOOD SAGA SEOUL D2", 
+            url: "https://drive.google.com/file/d/1-x39O-LhbCTnZMVUQQG1zt_l0J3hlmvW/view?usp=sharing", 
+            thumbnail: "images/thumbnails/tour-bs.jpg",
+            description: "BLOOD SAGA Tour 2026"
+        },
             // ADD MORE TOURS HERE
         ]
     },
@@ -3183,6 +3195,26 @@ const categoriesConfig = {
         },
     ]
 },
+
+    "ENHYPEN VAMPIRE vs HUMAN": {
+    "Vampire vs Human": [
+        { 
+            name: "Making Kimchi: To Serve or Get Served?", 
+            url: "https://www.youtube.com/watch?v=CcEkaaUj4aA", 
+            thumbnail: "images/thumbnails/vamp-ep1.jpg",
+            description: "Vampire vs Human"
+        },
+{ 
+            name: "That time we danced to Drunk-Dazed in front of a Sunim", 
+            url: "https://www.youtube.com/watch?v=xmVeQcERTB8", 
+            thumbnail: "images/thumbnails/vamp-ep2.jpg",
+            description: "Vampire vs Human"
+        },
+
+ // ADD OTHER EPISODES HERE
+    ]
+},
+
 
 "DARK MOON : THE BLOOD ALTAR": {
     "Dark Moon EPs": [
