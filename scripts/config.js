@@ -1794,6 +1794,13 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-won8.jpg",
                 description: "EN-LoG"
             },
+            { 
+                name: "Jungwon's Iceland Travel Vlog", 
+                url: "https://www.youtube.com/watch?v=E542JignpiE", 
+                thumbnail: "images/enlog/enlog-won9.jpg",
+                description: "EN-LoG"
+            },
+
             // ADD MORE EN-LOG HERE
         ],
 
@@ -1862,6 +1869,13 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-jay6.jpg",
                 description: "EN-LoG"
             },
+            { 
+                name: "Jay's Hakodate Travel Vlog", 
+                url: "https://www.youtube.com/watch?v=y8KuzCaRpo8", 
+                thumbnail: "images/enlog/enlog-jay7.jpg",
+                description: "EN-LoG"
+            },
+
             // ADD MORE EN-LOG HERE
         ],
 
@@ -1925,7 +1939,7 @@ const categoriesConfig = {
                 description: "EN-LoG"
             },
            { 
-                name: "[Vlog' Milano Cortina 2026", 
+                name: "[Vlog] Milano Cortina 2026", 
                 url: "https://www.youtube.com/watch?v=Ltd364p7TIQ", 
                 thumbnail: "images/enlog/enlog-hoon6.jpg",
                 description: "EN-LoG"
@@ -1964,6 +1978,13 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-sunoo5.jpg",
                 description: "EN-LoG"
             },
+           { 
+                name: "Sunoo's Jeju Island & Osaka Trip", 
+                url: "https://www.youtube.com/watch?v=7P6aY-xfmQw", 
+                thumbnail: "images/enlog/enlog-sunoo6.jpg",
+                description: "EN-LoG"
+            },
+
             // ADD MORE EN-LOG HERE
         ],
  
@@ -2140,6 +2161,13 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-enha24.jpg",
                 description: "EN-LoG"
             },
+           { 
+                name: "Jake & Sunghoon's Sapporo Ski Trip Vlog", 
+                url: "https://www.youtube.com/watch?v=qg3U-ub1xi8", 
+                thumbnail: "images/enlog/enlog-enha25.jpg",
+                description: "EN-LoG"
+            },
+
             // ADD MORE EN-LOG HERE
         ],
     },
