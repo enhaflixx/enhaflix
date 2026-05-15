@@ -2654,6 +2654,13 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/tour-bs.jpg",
             description: "BLOOD SAGA Tour 2026"
         },
+{ 
+            name: "ENHYPEN BLOOD SAGA SEOUL D3", 
+            url: "https://drive.google.com/file/d/1IhmYF5ox71DbuQvAoXfXVqS8vgGPyP37/view?usp=sharing", 
+            thumbnail: "images/thumbnails/tour-bs.jpg",
+            description: "BLOOD SAGA Tour 2026"
+        },
+
             // ADD MORE TOURS HERE
         ]
     },
@@ -3238,10 +3245,41 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/vamp-ep2.jpg",
             description: "Vampire vs Human"
         },
+        { 
+            name: "When Blood-Deprived Meets Blood-Pumped", 
+            url: "https://www.youtube.com/watch?v=5qwQMIJRWaI", 
+            thumbnail: "images/thumbnails/vamp-ep3.jpg",
+            description: "Vampire vs Human"
+        },
+
 
  // ADD OTHER EPISODES HERE
     ]
 },
+
+    "THE BLOOD DIARY": {
+    "The Blood Diary with ENHYPEN": [
+        { 
+            name: "A Japanese Shaman FAINTED :The Curse of the Abandoned Hotel | EP.1", 
+            url: "https://www.youtube.com/watch?v=_cLUY0oEl6k&t=37s", 
+            thumbnail: "images/thumbnails/bd-ep1.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+{ 
+            name: "The Funeral Was a FAKE : Why We Had to DIG HER UP After 30 Days? | EP.2", 
+            url: "https://www.youtube.com/watch?v=5t2_-ZCGO_4", 
+            thumbnail: "images/thumbnails/bd-ep2.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+{ 
+            name: " 'The Flour Devil' : History's Worst Serial Killer is BACK | EP.3", 
+            url: "https://www.youtube.com/watch?v=Zlo8LeEa_RQ", 
+            thumbnail: "images/thumbnails/bd-ep3.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+    ]
+},
+
 
 
 "DARK MOON : THE BLOOD ALTAR": {
