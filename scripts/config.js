@@ -3272,9 +3272,21 @@ const categoriesConfig = {
             description: "The Blood Diary - Spotify"
         },
 { 
-            name: " 'The Flour Devil' : History's Worst Serial Killer is BACK | EP.3", 
+            name: "'The Flour Devil' : History's Worst Serial Killer is BACK | EP.3", 
             url: "https://www.youtube.com/watch?v=Zlo8LeEa_RQ", 
             thumbnail: "images/thumbnails/bd-ep3.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+        { 
+            name: "Why the U.S. Navy Instantly Classified This Desert area | EP.4", 
+            url: "https://www.youtube.com/watch?v=O68E1qw2L8o", 
+            thumbnail: "images/thumbnails/bd-ep4.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+        { 
+            name: "An EVIL SPIRIT Appeared in Seoul?! True Nightmares from History | EP.5", 
+            url: "https://www.youtube.com/watch?v=ufSio5iRvE0", 
+            thumbnail: "images/thumbnails/bd-ep5.jpg",
             description: "The Blood Diary - Spotify"
         },
     ]
