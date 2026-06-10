@@ -1565,6 +1565,18 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/eat-ep5.jpg",
                 description: "Eat Sleep EN Dive"
             },
+            { 
+                name: "Eat Sleep EN Dive AU | EP.1", 
+                url: "https://www.youtube.com/watch?v=V-8MumzNRb0", 
+                thumbnail: "images/thumbnails/eatau-ep1.jpg",
+                description: "Eat Sleep EN Dive Australia"
+            },
+{ 
+                name: "Eat Sleep EN Dive AU | EP.2", 
+                url: "https://www.youtube.com/watch?v=k74OlugGvHQ", 
+                thumbnail: "images/thumbnails/eatau-ep2.jpg",
+                description: "Eat Sleep EN Dive Australia"
+            },
             // ADD MORE FSE EPISODES HERE
         ],
         "SO SO FUN": [
@@ -3180,6 +3192,12 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/wvcon-2025.jpg",
                 description: "Weverse Con 2025"
             },
+            { 
+                name: "ENHYPEN Weverse Con 2026", 
+                url: "https://drive.google.com/file/d/1fDNDSdMUNwu4iP9Kc0bioKiKPJQNuFmN/view?usp=sharing", 
+                thumbnail: "images/thumbnails/wvcon-2026.jpg",
+                description: "Weverse Con 2026"
+            },
             // ADD OTHER CONTENT HERE
         ]
     },
@@ -3251,7 +3269,12 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/vamp-ep3.jpg",
             description: "Vampire vs Human"
         },
-
+        { 
+            name: "Vampire vs Human Behind the Scenes", 
+            url: "https://www.youtube.com/watch?v=RFgEbWZqTR4", 
+            thumbnail: "images/thumbnails/vamp-bts.jpg",
+            description: "Vampire vs Human BTS"
+        },
 
  // ADD OTHER EPISODES HERE
     ]
