@@ -2886,7 +2886,7 @@ const categoriesConfig = {
         "ENHYPEN Coachella Performances": [
              { 
             name: "ENHYPEN Coachella Week 1", 
-            url: "https://drive.google.com/file/d/1tsiiztrDlBSZfytSDA-PQPFzLcmY8nu8/view?usp=sharing", 
+            url: "https://drive.google.com/file/d/1pKWQVglmZGhO9-q1uLUUNe6HlFUAG_ZS/view?usp=sharing", 
             thumbnail: "images/thumbnails/enchella-week-one.jpg",
             description: "ENHYPEN Coachella 2025"
         },
