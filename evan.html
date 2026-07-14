@@ -7,172 +7,653 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><filter id='shadow'><feDropShadow dx='1' dy='1' stdDeviation='1' flood-color='%23000' flood-opacity='0.3'/></filter></defs><text x='50%' y='50%' text-anchor='middle' dy='.35em' font-size='85' fill='%23e50914' font-weight='900' font-family='Arial, sans-serif' filter='url(%23shadow)'>E</text></svg>">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        /* Additional custom styles for the EVAN page */
-        .evan-container {
-            max-width: 1200px;
-            margin: 100px auto 50px;
-            padding: 0 20px;
+        /* ===== EVAN PAGE FIXES ===== */
+        
+        /* Force content items to be visible */
+        .content-item {
+            min-width: 200px;
+            min-height: 280px;
+            height: 280px !important;
+            flex: 0 0 auto;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
         }
-
-        /* Hero Banner Section */
-        .evan-hero {
-            position: relative;
-            height: 70vh;
-            min-height: 500px;
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 50px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        
+        /* Make sure content rows show items */
+        .content-row {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            gap: 15px !important;
+            overflow-x: auto !important;
+            padding: 10px 0 !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            min-height: 300px !important;
         }
-
-        /* Overlay for the hero section */
-        .evan-hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 50px;
-            text-align: center;
+        
+        /* Ensure subcategories are visible */
+        .subcategory {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin-bottom: 30px !important;
         }
-
-        .evan-hero-content h1 {
-            font-size: 5rem;
-            font-weight: 700;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
-            margin-bottom: 20px;
-            letter-spacing: 5px;
-            opacity: 0;
-            animation: fadeInUp 1s ease forwards;
+        
+        /* Ensure categories are visible */
+        .category {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin-bottom: 40px !important;
         }
-
-        .coming-soon-badge {
-            background: rgba(229, 9, 20, 0.9);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: white;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-            display: inline-block;
-            backdrop-filter: blur(5px);
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.2s forwards;
+        
+        /* Fix for item placeholders */
+        .item-placeholder {
+            width: 100% !important;
+            height: 100% !important;
+            background-size: cover !important;
+            background-position: center !important;
+            display: block !important;
         }
-
-        .evan-hero-content p {
-            font-size: 1.2rem;
-            color: #ddd;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.4s forwards;
+        
+        /* Overlay fix */
+        .item-overlay {
+            position: absolute !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            padding: 15px !important;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent) !important;
+            opacity: 0 !important;
+            transition: opacity 0.3s ease !important;
         }
-
-        /* Info Section */
-        .info-section {
-            background: #1a1a1a;
-            border-radius: 16px;
-            padding: 40px;
-            margin-top: 40px;
-            border: 1px solid #333;
-            text-align: center;
-            opacity: 0;
-            animation: fadeInUp 0.8s ease 0.6s forwards;
-        }
-
-        .info-section h2 {
-            font-size: 2rem;
-            color: #e0e0e0;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .info-section p {
-            color: #b0b0b0;
-            line-height: 1.8;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .social-link {
-            color: #888;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .social-link:hover {
-            color: #e50914;
-            transform: translateY(-3px);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .evan-hero {
-                height: 60vh;
-                min-height: 400px;
-            }
-            .evan-hero-content h1 {
-                font-size: 3rem;
-            }
-            .coming-soon-badge {
-                font-size: 1rem;
-                padding: 8px 20px;
-            }
-            .info-section {
-                padding: 25px;
-            }
-            .info-section h2 {
-                font-size: 1.5rem;
-            }
+        
+        .content-item:hover .item-overlay {
+            opacity: 1 !important;
         }
     </style>
 </head>
 <body>
+    <div id="main-page" class="page active">
+        <header class="main-header" id="main-header">
+            <a href="index.html" class="header-logo">ENHA-FLIX</a>
+            <div class="search-container">
+                <input type="text" class="search-bar" id="searchInput" placeholder="Search EVAN content..." onkeyup="handleSearch()">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </header>
 
-    
-    <div class="evan-container">
-        <!-- Hero Banner Section -->
-        <!-- REPLACE 'background-image' WITH YOUR OWN PHOTO OF HEESEUNG/EVAN -->
-        <div class="evan-hero" style="background-image: url('images/evan-hero.jpg');">
-            <div class="evan-hero-overlay">
-                <div class="evan-hero-content">
-                    <div class="coming-soon-badge"> COMING SOON </div>
-                    <h1>EVAN</h1>
-                    <p>RIDE OR DIE . 2026.06.22.</p>
+        <div class="hero-banner" id="hero-banner">
+            <!-- Banner will be loaded automatically by JavaScript -->
+        </div>
+
+        <section class="categories-section">
+            <!-- Regular Categories -->
+            <div id="categories-container">
+                <!-- Categories will be loaded automatically by JavaScript -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="video-modal">
+        <div class="modal-overlay" onclick="closeVideoModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Video Player</h3>
+                <div class="modal-controls">
+                    <button class="modal-btn fullscreen-btn" onclick="toggleFullscreen()">
+                        ⛶ Fullscreen
+                    </button>
+                    <button class="modal-btn close-btn" onclick="closeVideoModal()">
+                        ✕ Close
+                    </button>
+                </div>
+            </div>
+            <div class="video-container">
+                <div id="video-player"></div>
+                <div class="progress-indicator" id="progress-indicator">
+                    <div class="progress-text">Watching: <span id="progress-percent">0%</span></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        </body>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
+
+    <script src="scripts/evan-config.js"></script>
+    <script>
+        // ===== SEARCH SYSTEM =====
+        class SearchManager {
+            constructor() {
+                this.allContent = this.getAllContent();
+                this.searchInput = document.getElementById('searchInput');
+                this.searchResults = document.getElementById('searchResults');
+                this.setupSearch();
+            }
+
+            setupSearch() {
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.search-container')) {
+                        this.hideResults();
+                    }
+                });
+
+                this.searchInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        this.hideResults();
+                        this.searchInput.blur();
+                    }
+                });
+            }
+
+            getAllContent() {
+                const allItems = [];
+                
+                if (typeof categoriesConfig === 'undefined') return allItems;
+                
+                Object.values(categoriesConfig).forEach(category => {
+                    Object.values(category).forEach(subcategory => {
+                        subcategory.forEach(item => {
+                            allItems.push({
+                                ...item,
+                                searchableText: `${item.name} ${item.description || ''}`.toLowerCase()
+                            });
+                        });
+                    });
+                });
+
+                return allItems;
+            }
+
+            search(query) {
+                if (!query.trim()) {
+                    this.hideResults();
+                    return [];
+                }
+
+                const searchTerm = query.toLowerCase().trim();
+                const results = this.allContent.filter(item => {
+                    return item.searchableText.includes(searchTerm) ||
+                           item.name.toLowerCase().includes(searchTerm) ||
+                           (item.description && item.description.toLowerCase().includes(searchTerm));
+                });
+
+                return results.sort((a, b) => {
+                    const aNameMatch = a.name.toLowerCase().includes(searchTerm);
+                    const bNameMatch = b.name.toLowerCase().includes(searchTerm);
+                    if (aNameMatch && !bNameMatch) return -1;
+                    if (!aNameMatch && bNameMatch) return 1;
+                    return 0;
+                });
+            }
+
+            displayResults(results) {
+                if (results.length === 0) {
+                    this.searchResults.innerHTML = `
+                        <div class="no-results">
+                            <div class="no-results-icon">🔍</div>
+                            <div class="no-results-text">No results found</div>
+                            <div class="no-results-hint">Try different keywords</div>
+                        </div>
+                    `;
+                    this.searchResults.style.display = 'block';
+                    return;
+                }
+
+                this.searchResults.innerHTML = results.slice(0, 8).map(item => `
+                    <div class="search-result-item" onclick="openLink('${item.url}', '${item.name.replace(/'/g, "\\'")}', '${item.thumbnail}')">
+                        <div class="search-result-thumbnail">
+                            <img src="${item.thumbnail}" alt="${item.name}" 
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iNDUiIHZpZXdCb3g9IjAgMCA4MCA0NSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iNDUiIGZpbGw9IiMzMzMiLz48cGF0aCBkPSJNMzIgMjIuNUwzNiAxOUw0MCAyMi41TDM2IDI2TDMyIDIyLjVaIiBmaWxsPSIjZTUwOTE0Ii8+PC9zdmc+'">
+                        </div>
+                        <div class="search-result-info">
+                            <div class="search-result-title">${item.name}</div>
+                            ${item.description ? `<div class="search-result-description">${item.description}</div>` : ''}
+                        </div>
+                    </div>
+                `).join('');
+
+                this.searchResults.style.display = 'block';
+            }
+
+            hideResults() {
+                this.searchResults.style.display = 'none';
+            }
+
+            clearSearch() {
+                this.searchInput.value = '';
+                this.hideResults();
+            }
+        }
+
+        let searchManager;
+
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value;
+            const results = searchManager.search(query);
+            searchManager.displayResults(results);
+        }
+
+        // ===== VIDEO PLAYER =====
+        let currentVideoData = null;
+        let progressInterval = null;
+
+        function openVideoModal(url, title, thumbnail = '') {
+            const modal = document.getElementById('video-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const videoPlayer = document.getElementById('video-player');
+            
+            modalTitle.textContent = title;
+            
+            const embedUrl = generateEmbedUrl(url);
+            const videoId = generateVideoId(url, title);
+            
+            currentVideoData = {
+                id: videoId,
+                title: title,
+                thumbnail: thumbnail,
+                url: url,
+                startTime: Date.now()
+            };
+            
+            if (embedUrl) {
+                videoPlayer.innerHTML = `
+                    <iframe 
+                        src="${embedUrl}" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        style="width: 100%; height: 100%;"
+                        onload="startProgressTracking('${videoId}', '${title.replace(/'/g, "\\'")}', '${thumbnail}')"
+                    ></iframe>
+                `;
+            } else {
+                videoPlayer.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center; height: 100%; color: white; font-size: 1.2rem;">
+                        <p>This content cannot be embedded. <a href="${url}" target="_blank" style="color: #e50914;">Open in new tab</a></p>
+                    </div>
+                `;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function startProgressTracking(videoId, title, thumbnail) {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+            
+            let secondsWatched = 0;
+            const estimatedDuration = 180;
+            
+            progressInterval = setInterval(() => {
+                secondsWatched++;
+                const progress = (secondsWatched / estimatedDuration) * 100;
+                
+                const progressPercent = document.getElementById('progress-percent');
+                const progressFill = document.getElementById('progress-fill');
+                
+                if (progressPercent && progressFill) {
+                    progressPercent.textContent = Math.min(Math.round(progress), 100) + '%';
+                    progressFill.style.width = Math.min(progress, 100) + '%';
+                }
+            }, 1000);
+        }
+
+        function stopProgressTracking() {
+            if (progressInterval) {
+                clearInterval(progressInterval);
+                progressInterval = null;
+            }
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const videoPlayer = document.getElementById('video-player');
+            
+            stopProgressTracking();
+            videoPlayer.innerHTML = '';
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function generateVideoId(url, title) {
+            return btoa(url + title).replace(/[^a-zA-Z0-9]/g, '');
+        }
+
+        function generateEmbedUrl(url) {
+            try {
+                const urlObj = new URL(url);
+                
+                if (urlObj.hostname.includes('youtube.com') || urlObj.hostname.includes('youtu.be')) {
+                    let videoId;
+                    if (urlObj.hostname.includes('youtu.be')) {
+                        videoId = urlObj.pathname.slice(1);
+                    } else {
+                        videoId = urlObj.searchParams.get('v');
+                    }
+                    if (videoId) {
+                        return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+                    }
+                }
+                
+                if (urlObj.hostname.includes('spotify.com')) {
+                    const pathParts = urlObj.pathname.split('/');
+                    const type = pathParts[1];
+                    const id = pathParts[2];
+                    if (type && id) {
+                        return `https://open.spotify.com/embed/${type}/${id}`;
+                    }
+                }
+                
+                return url;
+            } catch {
+                return null;
+            }
+        }
+
+        function toggleFullscreen() {
+            const modal = document.getElementById('video-modal');
+            const fullscreenBtn = document.querySelector('.fullscreen-btn');
+            
+            if (modal.classList.contains('fullscreen')) {
+                modal.classList.remove('fullscreen');
+                fullscreenBtn.textContent = '⛶ Fullscreen';
+            } else {
+                modal.classList.add('fullscreen');
+                fullscreenBtn.textContent = '⛶ Exit Fullscreen';
+            }
+        }
+
+        // ===== OPEN LINK =====
+        function openLink(url, title, thumbnail = '') {
+            if (!url || url === '#') {
+                alert('Content coming soon! Stay tuned for EVAN.');
+                return;
+            }
+            
+            let cleanUrl = url.trim();
+            
+            if (cleanUrl.includes('youtube.com/watch?v=')) {
+                const videoId = cleanUrl.split('v=')[1]?.split('&')[0];
+                if (videoId) {
+                    openVideoModal(`https://www.youtube.com/embed/${videoId}`, title, thumbnail);
+                    return;
+                }
+            }
+            
+            if (cleanUrl.includes('youtu.be/')) {
+                const videoId = cleanUrl.split('youtu.be/')[1]?.split('?')[0];
+                if (videoId) {
+                    openVideoModal(`https://www.youtube.com/embed/${videoId}`, title, thumbnail);
+                    return;
+                }
+            }
+            
+            openVideoModal(cleanUrl, title, thumbnail);
+        }
+
+        // ===== LOAD CATEGORIES =====
+        function loadAllCategories() {
+            const container = document.getElementById('categories-container');
+            if (!container) return;
+
+            container.innerHTML = '';
+
+            if (typeof categoriesConfig === 'undefined' || Object.keys(categoriesConfig).length === 0) {
+                container.innerHTML = '<p style="text-align: center; padding: 2rem;">No categories found in evan-config.js</p>';
+                return;
+            }
+
+            Object.entries(categoriesConfig).forEach(([categoryTitle, subcategories], categoryIndex) => {
+                const categoryElement = createCategoryElement(categoryTitle, subcategories, categoryIndex);
+                container.appendChild(categoryElement);
+            });
+        }
+
+        function createCategoryElement(categoryTitle, subcategories, categoryIndex) {
+            const element = document.createElement('div');
+            element.className = 'category';
+            element.id = `category-${categoryIndex}`;
+
+            let html = `
+                <div class="category-header">
+                    <h2 class="category-title">${categoryTitle}</h2>
+                </div>
+            `;
+
+            Object.entries(subcategories).forEach(([subcategoryTitle, items], subIndex) => {
+                html += createSubcategoryElement(categoryIndex, subcategoryTitle, items, subIndex);
+            });
+
+            element.innerHTML = html;
+            return element;
+        }
+
+        function createSubcategoryElement(categoryIndex, subcategoryTitle, items, subIndex) {
+            const subcategoryId = `subcategory-${categoryIndex}-${subIndex}`;
+            
+            const visibleItems = items.slice(0, 5);
+            const hiddenItems = items.slice(5);
+            const hasHiddenItems = hiddenItems.length > 0;
+
+            return `
+                <div class="subcategory" id="${subcategoryId}">
+                    <h3 class="subcategory-title">${subcategoryTitle}</h3>
+                    <div class="content-row">
+                        ${visibleItems.map(item => createContentItem(item)).join('')}
+                        ${hasHiddenItems ? hiddenItems.map(item => createContentItem(item, true)).join('') : ''}
+                    </div>
+                    ${hasHiddenItems ? `
+                        <div class="show-more-container">
+                            <button class="show-more-btn" onclick="toggleContentItems('${subcategoryId}')">
+                                <span class="show-more-text">Show More</span>
+                                <span class="show-more-count">+${hiddenItems.length}</span>
+                                <span class="show-more-icon">▼</span>
+                            </button>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        }
+
+        function createContentItem(item, isHidden = false) {
+            const background = item.thumbnail ? 
+                `background-image: url('${item.thumbnail}')` : 
+                'background: linear-gradient(135deg, #e50914, #b20710)';
+
+            return `
+                <div class="content-item ${isHidden ? 'hidden-content' : ''}" 
+                     data-url="${item.url}"
+                     data-title="${item.name.replace(/'/g, "\\'")}"
+                     data-thumbnail="${item.thumbnail}">
+                    <div class="content-thumbnail">
+                        <div class="item-placeholder" style="${background}">
+                            <div class="item-overlay">
+                                <div class="item-title">${item.name}</div>
+                                ${item.description ? `<div class="item-description">${item.description}</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function toggleContentItems(subcategoryId) {
+            const subcategory = document.getElementById(subcategoryId);
+            const hiddenItems = subcategory.querySelectorAll('.hidden-content');
+            const showMoreBtn = subcategory.querySelector('.show-more-btn');
+            const showMoreText = showMoreBtn.querySelector('.show-more-text');
+            const showMoreIcon = showMoreBtn.querySelector('.show-more-icon');
+
+            if (hiddenItems.length > 0) {
+                hiddenItems.forEach(item => item.classList.remove('hidden-content'));
+                showMoreText.textContent = 'Show Less';
+                showMoreIcon.textContent = '▲';
+                showMoreBtn.classList.add('expanded');
+            } else {
+                const allItems = subcategory.querySelectorAll('.content-item');
+                allItems.forEach((item, index) => {
+                    if (index >= 5) item.classList.add('hidden-content');
+                });
+                showMoreText.textContent = 'Show More';
+                showMoreIcon.textContent = '▼';
+                showMoreBtn.classList.remove('expanded');
+            }
+        }
+
+        // ===== LOAD HERO BANNER =====
+        function loadHeroBanner() {
+            const heroBanner = document.getElementById('hero-banner');
+            if (!heroBanner || typeof CONFIG === 'undefined' || !CONFIG.banners || CONFIG.banners.length === 0) {
+                heroBanner.innerHTML = `
+                    <div class="banner-slide active" style="background: linear-gradient(135deg, #b20710 0%, #141414 100%);">
+                        <div class="banner-content">
+                            <h1 class="banner-title">EVAN</h1>
+                            <p class="banner-description">A new chapter begins</p>
+                            <button class="banner-button" onclick="alert('Coming soon!')">▶ Coming Soon</button>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            const banner = CONFIG.banners[0];
+            
+            let backgroundStyle = '';
+            if (banner.background) {
+                backgroundStyle = `background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${banner.background}') center/cover;`;
+            } else {
+                backgroundStyle = 'background: linear-gradient(135deg, #b20710 0%, #141414 100%);';
+            }
+
+            heroBanner.innerHTML = `
+                <div class="banner-slide active" style="${backgroundStyle}">
+                    <div class="banner-content">
+                        <h1 class="banner-title">${banner.title || 'EVAN'}</h1>
+                        <p class="banner-description">${banner.description || 'Coming Soon'}</p>
+                        <button class="banner-button" onclick="playVideo('${banner.youtubeId || ''}')">${banner.buttonText || '▶ Coming Soon'}</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function playVideo(videoId) {
+            if (videoId && videoId !== 'EXAMPLE_ID') {
+                window.open(videoId, '_blank');
+            } else {
+                alert('Content coming soon! Stay tuned for EVAN.');
+            }
+        }
+
+        // ===== CLICK HANDLERS =====
+        document.addEventListener('click', function(e) {
+            const contentItem = e.target.closest('.content-item');
+            if (contentItem) {
+                const url = contentItem.getAttribute('data-url');
+                const title = contentItem.getAttribute('data-title');
+                const thumbnail = contentItem.getAttribute('data-thumbnail');
+                if (url) {
+                    openLink(url, title, thumbnail);
+                }
+            }
+        });
+
+        // ===== HEADER SCROLL =====
+        function setupHeaderScroll() {
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+        }
+
+        // ===== SCROLL ANIMATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.content-item, .category');
+            fadeElements.forEach(element => {
+                element.classList.add('fade-on-scroll');
+            });
+            
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            function handleScrollAnimation() {
+                fadeElements.forEach(element => {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('visible');
+                    }
+                });
+            }
+            
+            handleScrollAnimation();
+            
+            let ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        handleScrollAnimation();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        });
+
+        // ===== DEBUG: Check if items exist =====
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const items = document.querySelectorAll('.content-item');
+                const subcategories = document.querySelectorAll('.subcategory');
+                const categories = document.querySelectorAll('.category');
+                
+                console.log('📊 EVAN Page Debug:');
+                console.log('  - Categories found:', categories.length);
+                console.log('  - Subcategories found:', subcategories.length);
+                console.log('  - Content items found:', items.length);
+                
+                if (items.length > 0) {
+                    console.log('✅ Content items are visible!');
+                } else {
+                    console.warn('⚠️ No content items found!');
+                }
+            }, 1000);
+        });
+
+        // ===== INITIALIZATION =====
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Starting EVAN page...');
+            loadAllCategories();
+            setupHeaderScroll();
+            loadHeroBanner();
+            searchManager = new SearchManager();
+            console.log('✅ EVAN page loaded successfully!');
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            const modal = document.getElementById('video-modal');
+            if (event.key === 'Escape' && modal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+    </script>
+</body>
 </html>
