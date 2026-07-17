@@ -1534,6 +1534,23 @@ const categoriesConfig = {
 
             // ADD MORE EN-O'CLOCK EPISODES HERE
         ],
+
+        "EN-O'CLOCK SPIN OFF": [
+            { 
+                name: "EP.1 The Room of the Forsaken", 
+                url: "https://www.youtube.com/watch?v=HVsQvcaXWao", 
+                thumbnail: "images/thumbnails/kobm-ep1.jpg",
+                description: "Knight Of Blood Moon"
+            },
+ { 
+                name: "EP.2 The Seal", 
+                url: "https://www.youtube.com/watch?v=Sz0DTtUl7oE", 
+                thumbnail: "images/thumbnails/kobm-ep2.jpg",
+                description: "Knight Of Blood Moon"
+            },
+             // ADD MORE KOBM EPISODES HERE
+        ],
+
         "Eat Sleep EN Dive": [
             { 
                 name: "Eat Sleep EN Dive | EP.1", 
@@ -3310,6 +3327,24 @@ const categoriesConfig = {
             name: "An EVIL SPIRIT Appeared in Seoul?! True Nightmares from History | EP.5", 
             url: "https://www.youtube.com/watch?v=ufSio5iRvE0", 
             thumbnail: "images/thumbnails/bd-ep5.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+        { 
+            name: "The Haunted Doll That Featured on TV and Shocked the World | EP.6", 
+            url: "https://www.youtube.com/watch?v=OKJ9cL_lOjk", 
+            thumbnail: "images/thumbnails/bd-ep6.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+{ 
+            name: "The Ghost's Face Witnessed by Dozens of Taxi Drivers | EP.7", 
+            url: "https://www.youtube.com/watch?v=YxJ_BIGBKhw", 
+            thumbnail: "images/thumbnails/bd-ep7.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+{ 
+            name: "Spain's Strangest Police Report : The Girl's Death&A Deadly Game | EP.8", 
+            url: "https://www.youtube.com/watch?v=Lsli7FxOOT8", 
+            thumbnail: "images/thumbnails/bd-ep8.jpg",
             description: "The Blood Diary - Spotify"
         },
     ]
