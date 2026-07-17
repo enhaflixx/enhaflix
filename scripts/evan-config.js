@@ -56,6 +56,18 @@ const categoriesConfig = {
         ],
         },
 
+    "Debut Documentary": {
+        "About EVAN": [
+            { 
+                name: "EVAN Debut Documentary", 
+                url: "https://www.youtube.com/watch?v=8Wb-OHWm240", 
+                thumbnail: "images/evan/thumbnails/evan-doc.jpg",
+                description: "Documentary"
+            },
+        ],
+        },
+
+
 "Binge Watch": {
         "Creator Picks": [
             { 
