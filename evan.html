@@ -7,70 +7,262 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><filter id='shadow'><feDropShadow dx='1' dy='1' stdDeviation='1' flood-color='%23000' flood-opacity='0.3'/></filter></defs><text x='50%' y='50%' text-anchor='middle' dy='.35em' font-size='85' fill='%23e50914' font-weight='900' font-family='Arial, sans-serif' filter='url(%23shadow)'>E</text></svg>">
     <link rel="stylesheet" href="styles/styles.css">
     <style>
-        /* ===== EVAN PAGE FIXES ===== */
+        /* ===== EVAN PAGE SPECIFIC STYLES ===== */
         
-        /* Force content items to be visible */
-        .content-item {
-            min-width: 380px;
-            min-height: 220px;
-            height: 220px !important;
-            flex: 0 0 auto;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
+        .categories-section {
+            padding: 40px 4% 60px !important;
+            position: relative;
+            z-index: 5;
+            margin-top: 0 !important;
+            background: #141414;
         }
         
-        /* Make sure content rows show items */
-        .content-row {
-            display: flex !important;
-            flex-wrap: nowrap !important;
-            gap: 15px !important;
-            overflow-x: auto !important;
-            padding: 10px 0 !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            min-height: 300px !important;
-        }
-        
-        /* Ensure subcategories are visible */
-        .subcategory {
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            margin-bottom: 30px !important;
-        }
-        
-        /* Ensure categories are visible */
         .category {
             display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
             margin-bottom: 40px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
         }
         
-        /* Fix for item placeholders */
+        .subcategory {
+            display: block !important;
+            margin-bottom: 30px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        /* Content row - WRAPS instead of horizontal scroll */
+        .content-row {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 10px !important;
+            overflow-x: visible !important;
+            padding: 10px 0 !important;
+            min-height: 170px !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        /* Content items */
+        .content-item {
+            min-width: 300px !important;
+            width: 300px !important;
+            height: 200px !important;
+            flex: 0 0 auto !important;
+            display: block !important;
+            border-radius: 4px !important;
+            overflow: hidden !important;
+            position: relative !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            background: #2f2f2f !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        .content-item:hover {
+            transform: scale(1.05) !important;
+            z-index: 5 !important;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+        }
+        
+        .content-thumbnail {
+            width: 100% !important;
+            height: 100% !important;
+            position: relative !important;
+        }
+        
         .item-placeholder {
             width: 100% !important;
             height: 100% !important;
             background-size: cover !important;
             background-position: center !important;
-            display: block !important;
+            position: relative !important;
         }
         
-        /* Overlay fix */
         .item-overlay {
             position: absolute !important;
             bottom: 0 !important;
             left: 0 !important;
             right: 0 !important;
-            padding: 15px !important;
+            padding: 12px !important;
             background: linear-gradient(to top, rgba(0,0,0,0.9), transparent) !important;
             opacity: 0 !important;
             transition: opacity 0.3s ease !important;
+            pointer-events: none !important;
         }
         
         .content-item:hover .item-overlay {
             opacity: 1 !important;
+        }
+        
+        .item-title {
+            color: white !important;
+            font-size: 0.9rem !important;
+            font-weight: 600 !important;
+            margin-bottom: 2px !important;
+        }
+        
+        .item-description {
+            color: #ccc !important;
+            font-size: 0.75rem !important;
+        }
+        
+        /* Category titles */
+        .category-title {
+            font-size: 1.5rem !important;
+            font-weight: 700 !important;
+            color: white !important;
+        }
+        
+        .subcategory-title {
+            font-size: 1.2rem !important;
+            font-weight: 500 !important;
+            color: #e5e5e5 !important;
+            margin-bottom: 10px !important;
+        }
+        
+        /* Hidden content */
+        .hidden-content {
+            display: none !important;
+        }
+        
+        /* Show More button */
+        .show-more-container {
+            margin-top: 15px !important;
+            text-align: center !important;
+        }
+        
+        .show-more-btn {
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid #333 !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: 20px !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            font-size: 0.9rem !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 5px !important;
+        }
+        
+        .show-more-btn:hover {
+            background: rgba(255,255,255,0.2) !important;
+            border-color: #666 !important;
+        }
+        
+        .show-more-btn.expanded {
+            background: rgba(229, 9, 20, 0.2) !important;
+            border-color: #e50914 !important;
+        }
+        
+        .show-more-count {
+            background: #e50914 !important;
+            color: white !important;
+            padding: 1px 8px !important;
+            border-radius: 10px !important;
+            font-size: 11px !important;
+            font-weight: 700 !important;
+        }
+        
+        .show-more-icon {
+            font-size: 11px !important;
+            transition: transform 0.3s ease !important;
+        }
+        
+        .show-more-btn.expanded .show-more-icon {
+            transform: rotate(180deg) !important;
+        }
+        
+        /* Hero banner */
+        .hero-banner {
+            height: 70vh !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+        
+        .banner-slide {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+            padding-left: 4rem !important;
+            background-size: cover !important;
+            background-position: center !important;
+        }
+        
+        .banner-content {
+            max-width: 600px !important;
+            z-index: 2 !important;
+        }
+        
+        .banner-title {
+            font-size: 3.5rem !important;
+            font-weight: 900 !important;
+            color: white !important;
+            margin-bottom: 1rem !important;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7) !important;
+        }
+        
+        .banner-description {
+            font-size: 1.3rem !important;
+            color: #f5f5f5 !important;
+            margin-bottom: 1.5rem !important;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.7) !important;
+        }
+        
+        .banner-button {
+            background: #e50914 !important;
+            color: white !important;
+            border: none !important;
+            padding: 12px 30px !important;
+            border-radius: 4px !important;
+            font-size: 1.1rem !important;
+            cursor: pointer !important;
+            transition: background 0.3s ease !important;
+        }
+        
+        .banner-button:hover {
+            background: #b20710 !important;
+        }
+        
+        /* Header */
+        .main-header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            padding: 20px 4% !important;
+            z-index: 100 !important;
+            transition: background 0.3s !important;
+        }
+        
+        .main-header.header-scrolled {
+            background: #141414 !important;
+        }
+        
+        .header-logo {
+            color: #e50914 !important;
+            font-size: 1.8rem !important;
+            font-weight: 900 !important;
+            text-decoration: none !important;
+        }
+        
+        .search-container {
+            position: relative !important;
+        }
+        
+        .search-bar {
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid rgba(255,255,255,0.3) !important;
+            padding: 8px 15px !important;
+            border-radius: 4px !important;
+            color: white !important;
+            width: 300px !important;
         }
     </style>
 </head>
@@ -84,15 +276,10 @@
             </div>
         </header>
 
-        <div class="hero-banner" id="hero-banner">
-            <!-- Banner will be loaded automatically by JavaScript -->
-        </div>
+        <div class="hero-banner" id="hero-banner"></div>
 
         <section class="categories-section">
-            <!-- Regular Categories -->
-            <div id="categories-container">
-                <!-- Categories will be loaded automatically by JavaScript -->
-            </div>
+            <div id="categories-container"></div>
         </section>
     </div>
 
@@ -103,12 +290,8 @@
             <div class="modal-header">
                 <h3 id="modal-title">Video Player</h3>
                 <div class="modal-controls">
-                    <button class="modal-btn fullscreen-btn" onclick="toggleFullscreen()">
-                        ⛶ Fullscreen
-                    </button>
-                    <button class="modal-btn close-btn" onclick="closeVideoModal()">
-                        ✕ Close
-                    </button>
+                    <button class="modal-btn fullscreen-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+                    <button class="modal-btn close-btn" onclick="closeVideoModal()">✕ Close</button>
                 </div>
             </div>
             <div class="video-container">
@@ -123,7 +306,6 @@
         </div>
     </div>
 
-    <!-- Toast Notification -->
     <div id="toast" class="toast">
         <span id="toast-message"></span>
     </div>
@@ -145,7 +327,6 @@
                         this.hideResults();
                     }
                 });
-
                 this.searchInput.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape') {
                         this.hideResults();
@@ -156,9 +337,7 @@
 
             getAllContent() {
                 const allItems = [];
-                
                 if (typeof categoriesConfig === 'undefined') return allItems;
-                
                 Object.values(categoriesConfig).forEach(category => {
                     Object.values(category).forEach(subcategory => {
                         subcategory.forEach(item => {
@@ -169,7 +348,6 @@
                         });
                     });
                 });
-
                 return allItems;
             }
 
@@ -178,14 +356,12 @@
                     this.hideResults();
                     return [];
                 }
-
                 const searchTerm = query.toLowerCase().trim();
                 const results = this.allContent.filter(item => {
                     return item.searchableText.includes(searchTerm) ||
                            item.name.toLowerCase().includes(searchTerm) ||
                            (item.description && item.description.toLowerCase().includes(searchTerm));
                 });
-
                 return results.sort((a, b) => {
                     const aNameMatch = a.name.toLowerCase().includes(searchTerm);
                     const bNameMatch = b.name.toLowerCase().includes(searchTerm);
@@ -207,7 +383,6 @@
                     this.searchResults.style.display = 'block';
                     return;
                 }
-
                 this.searchResults.innerHTML = results.slice(0, 8).map(item => `
                     <div class="search-result-item" onclick="openLink('${item.url}', '${item.name.replace(/'/g, "\\'")}', '${item.thumbnail}')">
                         <div class="search-result-thumbnail">
@@ -220,7 +395,6 @@
                         </div>
                     </div>
                 `).join('');
-
                 this.searchResults.style.display = 'block';
             }
 
@@ -250,30 +424,13 @@
             const modal = document.getElementById('video-modal');
             const modalTitle = document.getElementById('modal-title');
             const videoPlayer = document.getElementById('video-player');
-            
             modalTitle.textContent = title;
-            
             const embedUrl = generateEmbedUrl(url);
             const videoId = generateVideoId(url, title);
-            
-            currentVideoData = {
-                id: videoId,
-                title: title,
-                thumbnail: thumbnail,
-                url: url,
-                startTime: Date.now()
-            };
-            
+            currentVideoData = { id: videoId, title: title, thumbnail: thumbnail, url: url, startTime: Date.now() };
             if (embedUrl) {
                 videoPlayer.innerHTML = `
-                    <iframe 
-                        src="${embedUrl}" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                        style="width: 100%; height: 100%;"
-                        onload="startProgressTracking('${videoId}', '${title.replace(/'/g, "\\'")}', '${thumbnail}')"
-                    ></iframe>
+                    <iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;" onload="startProgressTracking('${videoId}', '${title.replace(/'/g, "\\'")}', '${thumbnail}')"></iframe>
                 `;
             } else {
                 videoPlayer.innerHTML = `
@@ -282,26 +439,19 @@
                     </div>
                 `;
             }
-            
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function startProgressTracking(videoId, title, thumbnail) {
-            if (progressInterval) {
-                clearInterval(progressInterval);
-            }
-            
+            if (progressInterval) clearInterval(progressInterval);
             let secondsWatched = 0;
             const estimatedDuration = 180;
-            
             progressInterval = setInterval(() => {
                 secondsWatched++;
                 const progress = (secondsWatched / estimatedDuration) * 100;
-                
                 const progressPercent = document.getElementById('progress-percent');
                 const progressFill = document.getElementById('progress-fill');
-                
                 if (progressPercent && progressFill) {
                     progressPercent.textContent = Math.min(Math.round(progress), 100) + '%';
                     progressFill.style.width = Math.min(progress, 100) + '%';
@@ -310,16 +460,12 @@
         }
 
         function stopProgressTracking() {
-            if (progressInterval) {
-                clearInterval(progressInterval);
-                progressInterval = null;
-            }
+            if (progressInterval) { clearInterval(progressInterval); progressInterval = null; }
         }
 
         function closeVideoModal() {
             const modal = document.getElementById('video-modal');
             const videoPlayer = document.getElementById('video-player');
-            
             stopProgressTracking();
             videoPlayer.innerHTML = '';
             modal.classList.remove('active');
@@ -333,7 +479,6 @@
         function generateEmbedUrl(url) {
             try {
                 const urlObj = new URL(url);
-                
                 if (urlObj.hostname.includes('youtube.com') || urlObj.hostname.includes('youtu.be')) {
                     let videoId;
                     if (urlObj.hostname.includes('youtu.be')) {
@@ -345,7 +490,6 @@
                         return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
                     }
                 }
-                
                 if (urlObj.hostname.includes('spotify.com')) {
                     const pathParts = urlObj.pathname.split('/');
                     const type = pathParts[1];
@@ -354,17 +498,13 @@
                         return `https://open.spotify.com/embed/${type}/${id}`;
                     }
                 }
-                
                 return url;
-            } catch {
-                return null;
-            }
+            } catch { return null; }
         }
 
         function toggleFullscreen() {
             const modal = document.getElementById('video-modal');
             const fullscreenBtn = document.querySelector('.fullscreen-btn');
-            
             if (modal.classList.contains('fullscreen')) {
                 modal.classList.remove('fullscreen');
                 fullscreenBtn.textContent = '⛶ Fullscreen';
@@ -374,15 +514,12 @@
             }
         }
 
-        // ===== OPEN LINK =====
         function openLink(url, title, thumbnail = '') {
             if (!url || url === '#') {
                 alert('Content coming soon! Stay tuned for EVAN.');
                 return;
             }
-            
             let cleanUrl = url.trim();
-            
             if (cleanUrl.includes('youtube.com/watch?v=')) {
                 const videoId = cleanUrl.split('v=')[1]?.split('&')[0];
                 if (videoId) {
@@ -390,7 +527,6 @@
                     return;
                 }
             }
-            
             if (cleanUrl.includes('youtu.be/')) {
                 const videoId = cleanUrl.split('youtu.be/')[1]?.split('?')[0];
                 if (videoId) {
@@ -398,7 +534,6 @@
                     return;
                 }
             }
-            
             openVideoModal(cleanUrl, title, thumbnail);
         }
 
@@ -406,14 +541,11 @@
         function loadAllCategories() {
             const container = document.getElementById('categories-container');
             if (!container) return;
-
             container.innerHTML = '';
-
             if (typeof categoriesConfig === 'undefined' || Object.keys(categoriesConfig).length === 0) {
                 container.innerHTML = '<p style="text-align: center; padding: 2rem;">No categories found in evan-config.js</p>';
                 return;
             }
-
             Object.entries(categoriesConfig).forEach(([categoryTitle, subcategories], categoryIndex) => {
                 const categoryElement = createCategoryElement(categoryTitle, subcategories, categoryIndex);
                 container.appendChild(categoryElement);
@@ -424,17 +556,10 @@
             const element = document.createElement('div');
             element.className = 'category';
             element.id = `category-${categoryIndex}`;
-
-            let html = `
-                <div class="category-header">
-                    <h2 class="category-title">${categoryTitle}</h2>
-                </div>
-            `;
-
+            let html = `<div class="category-header"><h2 class="category-title">${categoryTitle}</h2></div>`;
             Object.entries(subcategories).forEach(([subcategoryTitle, items], subIndex) => {
                 html += createSubcategoryElement(categoryIndex, subcategoryTitle, items, subIndex);
             });
-
             element.innerHTML = html;
             return element;
         }
@@ -442,8 +567,8 @@
         function createSubcategoryElement(categoryIndex, subcategoryTitle, items, subIndex) {
             const subcategoryId = `subcategory-${categoryIndex}-${subIndex}`;
             
-            const visibleItems = items.slice(0, 5);
-            const hiddenItems = items.slice(5);
+            const visibleItems = items.slice(0, 4);
+            const hiddenItems = items.slice(4);
             const hasHiddenItems = hiddenItems.length > 0;
 
             return `
@@ -455,7 +580,7 @@
                     </div>
                     ${hasHiddenItems ? `
                         <div class="show-more-container">
-                            <button class="show-more-btn" onclick="toggleContentItems('${subcategoryId}')">
+                            <button class="show-more-btn" onclick="event.stopPropagation(); toggleContentItems('${subcategoryId}')">
                                 <span class="show-more-text">Show More</span>
                                 <span class="show-more-count">+${hiddenItems.length}</span>
                                 <span class="show-more-icon">▼</span>
@@ -468,8 +593,8 @@
 
         function createContentItem(item, isHidden = false) {
             const background = item.thumbnail ? 
-                `background-image: url('${item.thumbnail}')` : 
-                'background: linear-gradient(135deg, #e50914, #b20710)';
+                `background-image: url('${item.thumbnail}'); background-size: cover; background-position: center;` : 
+                'background: linear-gradient(135deg, #e50914, #b20710);';
 
             return `
                 <div class="content-item ${isHidden ? 'hidden-content' : ''}" 
@@ -488,25 +613,41 @@
             `;
         }
 
+        // ===== TOGGLE CONTENT ITEMS =====
         function toggleContentItems(subcategoryId) {
             const subcategory = document.getElementById(subcategoryId);
+            if (!subcategory) {
+                console.error('Subcategory not found:', subcategoryId);
+                return;
+            }
+            
             const hiddenItems = subcategory.querySelectorAll('.hidden-content');
             const showMoreBtn = subcategory.querySelector('.show-more-btn');
+            
+            if (!showMoreBtn) return;
+            
             const showMoreText = showMoreBtn.querySelector('.show-more-text');
             const showMoreIcon = showMoreBtn.querySelector('.show-more-icon');
-
+            const showMoreCount = showMoreBtn.querySelector('.show-more-count');
+            
             if (hiddenItems.length > 0) {
-                hiddenItems.forEach(item => item.classList.remove('hidden-content'));
-                showMoreText.textContent = 'Show Less';
-                showMoreIcon.textContent = '▲';
+                hiddenItems.forEach(item => {
+                    item.classList.remove('hidden-content');
+                });
+                if (showMoreText) showMoreText.textContent = 'Show Less';
+                if (showMoreIcon) showMoreIcon.textContent = '▲';
+                if (showMoreCount) showMoreCount.style.display = 'none';
                 showMoreBtn.classList.add('expanded');
             } else {
                 const allItems = subcategory.querySelectorAll('.content-item');
                 allItems.forEach((item, index) => {
-                    if (index >= 5) item.classList.add('hidden-content');
+                    if (index >= 4) {
+                        item.classList.add('hidden-content');
+                    }
                 });
-                showMoreText.textContent = 'Show More';
-                showMoreIcon.textContent = '▼';
+                if (showMoreText) showMoreText.textContent = 'Show More';
+                if (showMoreIcon) showMoreIcon.textContent = '▼';
+                if (showMoreCount) showMoreCount.style.display = 'inline';
                 showMoreBtn.classList.remove('expanded');
             }
         }
@@ -526,16 +667,13 @@
                 `;
                 return;
             }
-
             const banner = CONFIG.banners[0];
-            
             let backgroundStyle = '';
             if (banner.background) {
                 backgroundStyle = `background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${banner.background}') center/cover;`;
             } else {
                 backgroundStyle = 'background: linear-gradient(135deg, #b20710 0%, #141414 100%);';
             }
-
             heroBanner.innerHTML = `
                 <div class="banner-slide active" style="${backgroundStyle}">
                     <div class="banner-content">
@@ -557,6 +695,10 @@
 
         // ===== CLICK HANDLERS =====
         document.addEventListener('click', function(e) {
+            if (e.target.closest('.show-more-btn')) {
+                return;
+            }
+            
             const contentItem = e.target.closest('.content-item');
             if (contentItem) {
                 const url = contentItem.getAttribute('data-url');
@@ -589,10 +731,7 @@
             
             function isElementInViewport(el) {
                 const rect = el.getBoundingClientRect();
-                return (
-                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
-                    rect.bottom >= 0
-                );
+                return (rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 && rect.bottom >= 0);
             }
             
             function handleScrollAnimation() {
@@ -617,26 +756,6 @@
             });
         });
 
-        // ===== DEBUG: Check if items exist =====
-        document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() {
-                const items = document.querySelectorAll('.content-item');
-                const subcategories = document.querySelectorAll('.subcategory');
-                const categories = document.querySelectorAll('.category');
-                
-                console.log('📊 EVAN Page Debug:');
-                console.log('  - Categories found:', categories.length);
-                console.log('  - Subcategories found:', subcategories.length);
-                console.log('  - Content items found:', items.length);
-                
-                if (items.length > 0) {
-                    console.log('✅ Content items are visible!');
-                } else {
-                    console.warn('⚠️ No content items found!');
-                }
-            }, 1000);
-        });
-
         // ===== INITIALIZATION =====
         document.addEventListener('DOMContentLoaded', function() {
             console.log('🚀 Starting EVAN page...');
@@ -647,7 +766,6 @@
             console.log('✅ EVAN page loaded successfully!');
         });
 
-        // Close modal with Escape key
         document.addEventListener('keydown', function(event) {
             const modal = document.getElementById('video-modal');
             if (event.key === 'Escape' && modal.classList.contains('active')) {
