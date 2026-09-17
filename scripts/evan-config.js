@@ -144,7 +144,7 @@ const categoriesConfig = {
                 description: "Sid:E"
             },
 { 
-                name: "[Open Recruitment] Signing up for the Slam Dunk meetup 🏀 First gathering", 
+                name: "[Open Recruitment] Signing up for the Slam Dunk meetup - First gathering", 
                 url: "https://www.youtube.com/watch?v=aEVD0PRa23Y", 
                 thumbnail: "images/evan/thumbnails/evan-side-6.jpg",
                 description: "Sid:E"
