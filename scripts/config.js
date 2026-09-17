@@ -22,7 +22,7 @@ const CONFIG = {
         {
             type: "image", // "color" or "image"
             background: "images/thumbnails/hero-banner.jpg", // or use image URL
-            title: "ENHYPEN THE SIN : VANISH",
+            title: "ENHYPEN THE SIN : BLISS",
             description: "Experience the ultimate new comeback",
             buttonText: "Watch Now",
             youtubeId: "https://youtu.be/R6e4tBWxIxE?si=A4T4WIYXiIifZbMV",
@@ -93,6 +93,13 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/album-thesin.jpg",
                 description: "2026.Album"
             },
+{ 
+                name: "THE SIN : BLISS", 
+                url: "https://open.spotify.com/album/2os46ReV779WlryAHPL6ko?si=t7XUVhVVRhOzX11QQMJclA", 
+                thumbnail: "images/thumbnails/album-thesinb.jpg",
+                description: "2026.Album"
+            },
+
             // ADD MORE ALBUMS HERE
         ],
         "Singles": [
@@ -358,8 +365,15 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/mv-knife.jpg",
             description: "Official Music Video"
         },
+{ 
+            name: "Bloody Paradise", 
+            url: "https://www.youtube.com/watch?v=MT-4Bk1Lw8g", 
+            thumbnail: "images/thumbnails/mv-bloody.jpg",
+            description: "Official Music Video"
+        },
             // ADD MORE TITLE TRACK MVS HERE
         ],
+
         "B-Side Tracks": [
            { 
             name: "Let Me In (20 CUBE)", 
@@ -499,6 +513,13 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/mv-stealer.jpg",
             description: "Official Music Video"
         },
+{ 
+            name: "Checkmate", 
+            url: "https://www.youtube.com/watch?v=K5SXamqxoio", 
+            thumbnail: "images/thumbnails/mv-checkmate.jpg",
+            description: "Official Music Video"
+        },
+
             // ADD MORE B-SIDE MVS HERE
         ]
     },
@@ -673,6 +694,13 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/dance-knife.jpg",
                 description: "Dance Practice"
             },
+{ 
+                name: "ENHYPEN Bloody Paradise Dance Practice", 
+                url: "https://www.youtube.com/watch?v=bPjrHu60278", 
+                thumbnail: "images/thumbnails/dance-bloody.jpg",
+                description: "Dance Practice"
+            },
+
             // ADD MORE DANCE PRACTICES HERE
         ]
     },
@@ -1534,23 +1562,6 @@ const categoriesConfig = {
 
             // ADD MORE EN-O'CLOCK EPISODES HERE
         ],
-
-        "EN-O'CLOCK SPIN OFF": [
-            { 
-                name: "EP.1 The Room of the Forsaken", 
-                url: "https://www.youtube.com/watch?v=HVsQvcaXWao", 
-                thumbnail: "images/thumbnails/kobm-ep1.jpg",
-                description: "Knight Of Blood Moon"
-            },
- { 
-                name: "EP.2 The Seal", 
-                url: "https://www.youtube.com/watch?v=Sz0DTtUl7oE", 
-                thumbnail: "images/thumbnails/kobm-ep2.jpg",
-                description: "Knight Of Blood Moon"
-            },
-             // ADD MORE KOBM EPISODES HERE
-        ],
-
         "Eat Sleep EN Dive": [
             { 
                 name: "Eat Sleep EN Dive | EP.1", 
@@ -1582,7 +1593,7 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/eat-ep5.jpg",
                 description: "Eat Sleep EN Dive"
             },
-            { 
+{ 
                 name: "Eat Sleep EN Dive AU | EP.1", 
                 url: "https://www.youtube.com/watch?v=V-8MumzNRb0", 
                 thumbnail: "images/thumbnails/eatau-ep1.jpg",
@@ -1594,8 +1605,45 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/eatau-ep2.jpg",
                 description: "Eat Sleep EN Dive Australia"
             },
+{ 
+                name: "Eat Sleep EN Dive AU | EP.3", 
+                url: "https://www.youtube.com/watch?v=iCGvYC4Rt40", 
+                thumbnail: "images/thumbnails/eatau-ep3.jpg",
+                description: "Eat Sleep EN Dive Australia"
+            },
+{ 
+                name: "Eat Sleep EN Dive AU | EP.4", 
+                url: "https://www.youtube.com/watch?v=XyWSgJ-7qMw", 
+                thumbnail: "images/thumbnails/eatau-ep4.jpg",
+                description: "Eat Sleep EN Dive Australia"
+            },
+{ 
+                name: "Eat Sleep EN Dive AU | Behind", 
+                url: "https://www.youtube.com/watch?v=yEL0XFIHabc", 
+                thumbnail: "images/thumbnails/eatau-bts.jpg",
+                description: "Eat Sleep EN Dive Australia"
+            },
+
+
             // ADD MORE FSE EPISODES HERE
         ],
+
+ "EN-O'CLOCK SPIN OFF": [
+            { 
+                name: "EP.1 The Room of the Forsaken", 
+                url: "https://www.youtube.com/watch?v=HVsQvcaXWao", 
+                thumbnail: "images/thumbnails/kobm-ep1.jpg",
+                description: "Knight Of Blood Moon"
+            },
+ { 
+                name: "EP.2 The Seal", 
+                url: "https://www.youtube.com/watch?v=Sz0DTtUl7oE", 
+                thumbnail: "images/thumbnails/kobm-ep2.jpg",
+                description: "Knight Of Blood Moon"
+            },
+             // ADD MORE KOBM EPISODES HERE
+        ],
+
         "SO SO FUN": [
             { 
                 name: "ENHYPEN 'SO SO FUN' EP.1", 
@@ -1768,7 +1816,6 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/cover-niki.jpg",
                 description: "Ni-ki Cover"
             },
-
             // ADD MORE MEMBER COVERS HERE
         ],
     },
@@ -1823,7 +1870,7 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-won8.jpg",
                 description: "EN-LoG"
             },
-            { 
+{ 
                 name: "Jungwon's Iceland Travel Vlog", 
                 url: "https://www.youtube.com/watch?v=E542JignpiE", 
                 thumbnail: "images/enlog/enlog-won9.jpg",
@@ -1898,7 +1945,7 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-jay6.jpg",
                 description: "EN-LoG"
             },
-            { 
+{ 
                 name: "Jay's Hakodate Travel Vlog", 
                 url: "https://www.youtube.com/watch?v=y8KuzCaRpo8", 
                 thumbnail: "images/enlog/enlog-jay7.jpg",
@@ -2007,10 +2054,16 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-sunoo5.jpg",
                 description: "EN-LoG"
             },
-           { 
+{ 
                 name: "Sunoo's Jeju Island & Osaka Trip", 
                 url: "https://www.youtube.com/watch?v=7P6aY-xfmQw", 
                 thumbnail: "images/enlog/enlog-sunoo6.jpg",
+                description: "EN-LoG"
+            },
+{ 
+                name: "Haeundae Beach & Makchang| SUNOO's Busan Travel Vlog", 
+                url: "https://www.youtube.com/watch?v=b85W7uYJunU", 
+                thumbnail: "images/enlog/enlog-sunoo7.jpg",
                 description: "EN-LoG"
             },
 
@@ -2190,13 +2243,12 @@ const categoriesConfig = {
                 thumbnail: "images/enlog/enlog-enha24.jpg",
                 description: "EN-LoG"
             },
-           { 
+{ 
                 name: "Jake & Sunghoon's Sapporo Ski Trip Vlog", 
                 url: "https://www.youtube.com/watch?v=qg3U-ub1xi8", 
                 thumbnail: "images/enlog/enlog-enha25.jpg",
                 description: "EN-LoG"
             },
-
             // ADD MORE EN-LOG HERE
         ],
     },
@@ -2671,7 +2723,7 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/tour-wtl-jpn2.jpg",
             description: "WTL Tour 2025"
         },
-            { 
+{ 
             name: "ENHYPEN BLOOD SAGA SEOUL D1", 
             url: "https://drive.google.com/file/d/1m-R-LU_vEWztbatHD4g6KsL9Zq8M0Tz5/view?usp=sharing", 
             thumbnail: "images/thumbnails/tour-bs.jpg",
@@ -2689,6 +2741,7 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/tour-bs.jpg",
             description: "BLOOD SAGA Tour 2026"
         },
+
 
             // ADD MORE TOURS HERE
         ]
@@ -2864,7 +2917,7 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/choom-sweet-venom.jpg",
                 description: "Studio Choom"
             },
-            { 
+{ 
                 name: "Trendsetter X HUMBLE. covered by ENHYPEN NI-KI", 
                 url: "https://www.youtube.com/watch?v=2JTBSa7XsjE&list=RD2JTBSa7XsjE&start_radio=1", 
                 thumbnail: "images/thumbnails/choom-niki.jpg",
@@ -2903,13 +2956,13 @@ const categoriesConfig = {
         "ENHYPEN Coachella Performances": [
              { 
             name: "ENHYPEN Coachella Week 1", 
-            url: "https://drive.google.com/file/d/1pKWQVglmZGhO9-q1uLUUNe6HlFUAG_ZS/view?usp=sharing", 
+            url: "https://drive.google.com/file/d/1tsiiztrDlBSZfytSDA-PQPFzLcmY8nu8/view?usp=sharing", 
             thumbnail: "images/thumbnails/enchella-week-one.jpg",
             description: "ENHYPEN Coachella 2025"
         },
 { 
             name: "ENHYPEN Coachella Week 2", 
-            url: "https://player.vimeo.com/video/1182373287?fl=pl&fe=sh", 
+            url: "https://player.vimeo.com/video/1146188277?fl=pl&fe=sh", 
             thumbnail: "images/thumbnails/enchella-week-two.jpg",
             description: "ENHYPEN Coachella 2025"
         }
@@ -3142,7 +3195,7 @@ const categoriesConfig = {
     },
 
 "SEASONS GREETINGS": {
-    "Seasons Greetings 2023": [
+    "Seasons Greetings": [
         { 
             name: "ENHYPEN Seasons Greetings 2023", 
             url: "https://drive.google.com/file/d/1b6xTKmyOiE7Ctzf2sbq3YAnZad4D7i0U/view?usp=sharing", 
@@ -3209,7 +3262,7 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/wvcon-2025.jpg",
                 description: "Weverse Con 2025"
             },
-            { 
+{ 
                 name: "ENHYPEN Weverse Con 2026", 
                 url: "https://drive.google.com/file/d/1fDNDSdMUNwu4iP9Kc0bioKiKPJQNuFmN/view?usp=sharing", 
                 thumbnail: "images/thumbnails/wvcon-2026.jpg",
@@ -3218,6 +3271,38 @@ const categoriesConfig = {
             // ADD OTHER CONTENT HERE
         ]
     },
+
+"ENHYPEN VAMPIRE vs HUMAN": {
+    "Vampire vs Human": [
+        { 
+            name: "Making Kimchi: To Serve or Get Served?", 
+            url: "https://www.youtube.com/watch?v=CcEkaaUj4aA", 
+            thumbnail: "images/thumbnails/vamp-ep1.jpg",
+            description: "Vampire vs Human"
+        },
+{ 
+            name: "That time we danced to Drunk-Dazed in front of a Sunim", 
+            url: "https://www.youtube.com/watch?v=xmVeQcERTB8", 
+            thumbnail: "images/thumbnails/vamp-ep2.jpg",
+            description: "Vampire vs Human"
+        },
+{ 
+            name: "When Blood-Deprived Meets Blood-Pumped", 
+            url: "https://www.youtube.com/watch?v=5qwQMIJRWaI", 
+            thumbnail: "images/thumbnails/vamp-ep3.jpg",
+            description: "Vampire vs Human"
+        },
+{ 
+            name: "Vampire vs Human Behind the Scenes", 
+            url: "https://www.youtube.com/watch?v=RFgEbWZqTR4", 
+            thumbnail: "images/thumbnails/vamp-bts.jpg",
+            description: "Vampire vs Human BTS"
+        },
+
+ // ADD OTHER EPISODES HERE
+    ]
+},
+
 
 "ENHYPEN EN-Co": {
     "ENHYPEN EN-Co EPs": [
@@ -3266,38 +3351,7 @@ const categoriesConfig = {
     ]
 },
 
-    "ENHYPEN VAMPIRE vs HUMAN": {
-    "Vampire vs Human": [
-        { 
-            name: "Making Kimchi: To Serve or Get Served?", 
-            url: "https://www.youtube.com/watch?v=CcEkaaUj4aA", 
-            thumbnail: "images/thumbnails/vamp-ep1.jpg",
-            description: "Vampire vs Human"
-        },
-{ 
-            name: "That time we danced to Drunk-Dazed in front of a Sunim", 
-            url: "https://www.youtube.com/watch?v=xmVeQcERTB8", 
-            thumbnail: "images/thumbnails/vamp-ep2.jpg",
-            description: "Vampire vs Human"
-        },
-        { 
-            name: "When Blood-Deprived Meets Blood-Pumped", 
-            url: "https://www.youtube.com/watch?v=5qwQMIJRWaI", 
-            thumbnail: "images/thumbnails/vamp-ep3.jpg",
-            description: "Vampire vs Human"
-        },
-        { 
-            name: "Vampire vs Human Behind the Scenes", 
-            url: "https://www.youtube.com/watch?v=RFgEbWZqTR4", 
-            thumbnail: "images/thumbnails/vamp-bts.jpg",
-            description: "Vampire vs Human BTS"
-        },
-
- // ADD OTHER EPISODES HERE
-    ]
-},
-
-    "THE BLOOD DIARY": {
+"THE BLOOD DIARY": {
     "The Blood Diary with ENHYPEN": [
         { 
             name: "A Japanese Shaman FAINTED :The Curse of the Abandoned Hotel | EP.1", 
@@ -3312,12 +3366,12 @@ const categoriesConfig = {
             description: "The Blood Diary - Spotify"
         },
 { 
-            name: "'The Flour Devil' : History's Worst Serial Killer is BACK | EP.3", 
+            name: " 'The Flour Devil' : History's Worst Serial Killer is BACK | EP.3", 
             url: "https://www.youtube.com/watch?v=Zlo8LeEa_RQ", 
             thumbnail: "images/thumbnails/bd-ep3.jpg",
             description: "The Blood Diary - Spotify"
         },
-        { 
+{ 
             name: "Why the U.S. Navy Instantly Classified This Desert area | EP.4", 
             url: "https://www.youtube.com/watch?v=O68E1qw2L8o", 
             thumbnail: "images/thumbnails/bd-ep4.jpg",
@@ -3329,7 +3383,7 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/bd-ep5.jpg",
             description: "The Blood Diary - Spotify"
         },
-        { 
+{ 
             name: "The Haunted Doll That Featured on TV and Shocked the World | EP.6", 
             url: "https://www.youtube.com/watch?v=OKJ9cL_lOjk", 
             thumbnail: "images/thumbnails/bd-ep6.jpg",
@@ -3342,14 +3396,31 @@ const categoriesConfig = {
             description: "The Blood Diary - Spotify"
         },
 { 
-            name: "Spain's Strangest Police Report : The Girl's Death&A Deadly Game | EP.8", 
+            name: "Spain's Strangest Police Report : The Girl's Death & A Deadly Game | EP.8", 
             url: "https://www.youtube.com/watch?v=Lsli7FxOOT8", 
             thumbnail: "images/thumbnails/bd-ep8.jpg",
             description: "The Blood Diary - Spotify"
         },
+{ 
+            name: "The Secret Lab: She broke, tore, and pieced it all together | EP.9", 
+            url: "https://www.youtube.com/watch?v=NlLsTGTuMKc", 
+            thumbnail: "images/thumbnails/bd-ep9.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+{ 
+            name: "THE VIEW THAT DROVE OVER 20 RESIDENTS TO THEIR DEATHS | EP.10", 
+            url: "https://www.youtube.com/watch?v=ZzLhsFruh0s", 
+            thumbnail: "images/thumbnails/bd-ep10.jpg",
+            description: "The Blood Diary - Spotify"
+        },
+{ 
+            name: "3 Clues the CIA Killed the Hollywood Writer | EP.11", 
+            url: "https://www.youtube.com/watch?v=rZkMjeD5jG8", 
+            thumbnail: "images/thumbnails/bd-ep11.jpg",
+            description: "The Blood Diary - Spotify"
+        },
     ]
 },
-
 
 
 "DARK MOON : THE BLOOD ALTAR": {
@@ -3509,6 +3580,12 @@ const categoriesConfig = {
             url: "https://www.youtube.com/watch?v=NPWxSUk5000", 
             thumbnail: "images/thumbnails/leemujin-hee.jpg",
             description: "Enhypen Heeseung Leemujin Service"
+        },
+{ 
+            name: "ENHYPEN Bad For You Live", 
+            url: "https://www.youtube.com/watch?v=fkkH5UMs0aY", 
+            thumbnail: "images/thumbnails/enha-soundbomb.jpg",
+            description: "SoundBomb 360"
         },
     ]
 }
