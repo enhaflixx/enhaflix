@@ -2869,6 +2869,12 @@ const categoriesConfig = {
                 thumbnail: "images/thumbnails/preview-narration.jpg",
                 description: "Album Preview"
             },
+            { 
+                name: "ENHYPEN THE SIN : BLISS Preview", 
+                url: "https://www.youtube.com/watch?v=HN3PwviQHQQ&list=PLfzKIe-m0OvM&index=22", 
+                thumbnail: "images/thumbnails/preview-bliss.jpg",
+                description: "Album Preview"
+            },
             // ADD MORE ALBUM PREVIEWS HERE
         ]
     },
