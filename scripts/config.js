@@ -525,6 +525,12 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/mv-checkmate.jpg",
             description: "Official Music Video"
         },
+            { 
+            name: "Stuck (Special Clip)", 
+            url: "https://www.youtube.com/watch?v=X42ixwTgUJk", 
+            thumbnail: "images/thumbnails/mv-stuck.jpg",
+            description: "Official Music Video"
+        },
 
             // ADD MORE B-SIDE MVS HERE
         ]
