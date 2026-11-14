@@ -371,6 +371,12 @@ const categoriesConfig = {
             thumbnail: "images/thumbnails/mv-bloody.jpg",
             description: "Official Music Video"
         },
+            { 
+            name: "I Want You", 
+            url: "https://www.youtube.com/watch?v=dE_Ro8Sac2M", 
+            thumbnail: "images/thumbnails/mv-want.jpg",
+            description: "Official Music Video"
+        },
             // ADD MORE TITLE TRACK MVS HERE
         ],
 
